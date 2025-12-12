@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+:root{
+  --gen-bg: #141827;
+  --gen-fg: #FFFFFF;
+  --gen-blueprint: #D6B24A;
+  --gen-feature: #D67A62;
+  --gen-cta: #4CC6E3;
+  --gen-soft-gray: #C8C8D2;
+  --gen-cool-gray: #9FA3AD;
+}
+
+html, body { height: 100%; }
+
+body{
+  background: var(--gen-bg);
+  color: var(--gen-fg);
+}
+
+::selection{
+  background: rgba(76,198,227,.25);
+}
+
+.gen-noise::before{
+  content:"";
+  position: fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.08;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+}
+
+.gen-dotbg{
+  background-image: radial-gradient(rgba(200,200,210,.16) 1px, transparent 1px);
+  background-size: 18px 18px;
+  background-position: 0 0;
+}

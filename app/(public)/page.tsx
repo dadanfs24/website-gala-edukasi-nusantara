@@ -1,0 +1,527 @@
+import Link from "next/link";
+import { Target, GraduationCap, Wallet, Megaphone } from "lucide-react";
+
+import { AdSlot } from "@/components/ui/ad-slot";
+import { campuses } from "@/lib/data/campuses";
+import { scholarships } from "@/lib/data/scholarships";
+import { events } from "@/lib/data/events";
+
+
+function Shortcut({
+  href,
+  label,
+  desc,
+}: {
+  href: string;
+  label: string;
+  desc: string;
+}) {
+  return (
+    <Link
+      href={href}
+      className="group rounded-2xl border border-white/10 bg-white/[0.04] p-4 backdrop-blur hover:bg-white/[0.06]"
+    >
+      <div className="flex items-start justify-between gap-3">
+        <div>
+          <div className="text-sm font-extrabold tracking-tight">{label}</div>
+          <div className="mt-1 text-xs text-[color:var(--gen-soft-gray)]/90">
+            {desc}
+          </div>
+        </div>
+        <span className="text-[color:var(--gen-cta)] transition-transform group-hover:translate-x-0.5">
+          →
+        </span>
+      </div>
+    </Link>
+  );
+}
+
+export default function HomePage() {
+  return (
+    <div className="gen-dotbg">
+      {/* HERO */}
+      <section className="mx-auto max-w-6xl px-4 pb-10 pt-10 sm:px-6 md:pb-16 md:pt-14">
+        <div className="grid items-center gap-10 md:grid-cols-2">
+          {/* LEFT */}
+          <div>
+            {/* ICON MAHASISWA + BRAND PILL */}
+            <div className="inline-flex flex-wrap items-center gap-3">
+              <span
+                className="rounded-2xl border border-white/10 bg-white/[0.04] p-3 backdrop-blur"
+                style={{
+                  boxShadow:
+                    "0 14px 55px rgba(76,198,227,.18), 0 10px 28px rgba(0,0,0,.35)",
+                }}
+                aria-hidden="true"
+              >
+                <GraduationCap
+                  className="h-7 w-7"
+                  style={{ color: "var(--gen-cta)" }}
+                />
+              </span>
+
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-3 py-1 text-xs font-semibold text-[color:var(--gen-soft-gray)]">
+                GEN • Gala Edukasi Nusantara{" "}
+                <span className="text-[color:var(--gen-blueprint)]">●</span>
+              </div>
+            </div>
+
+            {/* STYLE PILL */}
+            {/* <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-3 py-1 text-xs font-semibold text-[color:var(--gen-soft-gray)]">
+              Modern • Minimalis • Youthful <span className="text-[color:var(--gen-blueprint)]">●</span>
+            </div> */}
+
+            <h1 className="mt-4 text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">
+              Mulai{" "}
+              <span className="text-[color:var(--gen-blueprint)]">
+                Perjalanan
+              </span>{" "}
+              <span className="text-[color:var(--gen-feature)]">Kuliah</span>{" "}
+              Kamu{" "}
+              <span className="text-[color:var(--gen-cta)]">
+                Dengan Informasi yang Tepat
+              </span>
+            </h1>
+
+            <p className="mt-4 text-[15px] leading-relaxed text-[color:var(--gen-soft-gray)]/90">
+              Pendidikan bukan cuma pilih jurusan. Ini tentang masa depan,
+              kesempatan, dan keputusan yang menentukan arah hidup. Di GEN, kami
+              hadir untuk mastiin kamu ngga melangkah sendirian.
+            </p>
+
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Link
+                href="/beasiswa"
+                className="inline-flex items-center gap-2 rounded-2xl bg-white px-5 py-3 font-semibold text-[color:var(--gen-bg)] transition-transform hover:scale-[1.02] active:scale-[0.98]"
+              >
+                Cari Beasiswa{" "}
+                <span className="text-[color:var(--gen-cta)]">→</span>
+              </Link>
+
+              {/* <Link
+                href="/dashboard/kampus"
+                className="inline-flex items-center gap-2 rounded-2xl border border-white/15 bg-white/[0.04] px-5 py-3 font-semibold text-white hover:bg-white/[0.08]"
+              >
+                Dashboard Kampus
+              </Link> */}
+            </div>
+
+            <div className="mt-6 grid gap-3 sm:grid-cols-3">
+              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                <div className="text-sm font-extrabold">Terverifikasi</div>
+                <div className="mt-1 text-xs text-[color:var(--gen-soft-gray)]/90">
+                  Data jalur beasiswa & info kampus terstruktur.
+                </div>
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                <div className="text-sm font-extrabold">Ramah Gen-Z</div>
+                <div className="mt-1 text-xs text-[color:var(--gen-soft-gray)]/90">
+                  Bahasa jelas, checklist, dan langkah praktis.
+                </div>
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                <div className="text-sm font-extrabold">Feeder Kampus</div>
+                <div className="mt-1 text-xs text-[color:var(--gen-soft-gray)]/90">
+                  Promosi & akuisisi mahasiswa via GEN.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* RIGHT */}
+          <div className="relative">
+            {/* glow blobs */}
+            <div className="absolute -left-8 -top-8 h-40 w-40 rounded-full bg-[color:var(--gen-cta)]/20 blur-3xl" />
+            <div className="absolute -bottom-10 -right-10 h-52 w-52 rounded-full bg-[color:var(--gen-feature)]/20 blur-3xl" />
+
+            {/* image card */}
+            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-3 backdrop-blur">
+              <div className="relative overflow-hidden rounded-2xl border border-white/10">
+                {/* pakai gambar sementara dari Unsplash (langsung tampil tanpa setup next.config) */}
+                <img
+                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1400&q=80"
+                  alt="GEN student group"
+                  className="h-[360px] w-full object-cover sm:h-[420px] md:h-[520px]"
+                  loading="lazy"
+                />
+
+                {/* subtle dark gradient overlay biar text/button lain di kiri makin kontras */}
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#141827]/60 via-transparent to-transparent" />
+
+                {/* playful stickers */}
+                <div
+                  className="absolute right-4 top-4 rotate-[6deg] rounded-2xl px-4 py-2 text-sm font-extrabold"
+                  style={{
+                    background: "var(--gen-blueprint)",
+                    color: "var(--gen-bg)",
+                  }}
+                >
+                  Blueprint
+                </div>
+
+                <div
+                  className="absolute left-4 bottom-4 -rotate-[6deg] rounded-2xl px-4 py-2 text-sm font-extrabold text-white"
+                  style={{ background: "var(--gen-feature)" }}
+                >
+                  Feature
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* QUICK MENU */}
+      <section className="mx-auto max-w-6xl px-4 pb-12 sm:px-6">
+        <h2 className="text-xl font-extrabold tracking-tight md:text-2xl">
+          Menu Cepat
+        </h2>
+        <p className="mt-2 text-sm text-[color:var(--gen-soft-gray)]/90">
+          Loncat cepat ke fitur utama GEN.
+        </p>
+
+        <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <Shortcut
+            href="/beasiswa"
+            label="Beasiswa"
+            desc="Listing terstruktur + status open/closed."
+          />
+          <Shortcut
+            href="/artikel"
+            label="Artikel"
+            desc="Tips beasiswa, kampus, dan karier."
+          />
+          <Shortcut
+            href="/event"
+            label="Event"
+            desc="Tryout & webinar: gratis/berbayar."
+          />
+          {/* <Shortcut
+            href="/dashboard/kampus"
+            label="Dashboard Kampus"
+            desc="Free & Premium untuk kampus."
+          /> */}
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section className="mx-auto max-w-6xl px-4 pb-10 sm:px-6">
+  <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur md:p-8">
+    {/* glows */}
+    <div className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-[color:var(--gen-cta)]/14 blur-3xl" />
+    <div className="pointer-events-none absolute -right-24 -bottom-24 h-72 w-72 rounded-full bg-[color:var(--gen-feature)]/12 blur-3xl" />
+
+    {/* dot texture */}
+    <div
+      className="pointer-events-none absolute inset-0 opacity-[0.25]"
+      style={{
+        backgroundImage: "radial-gradient(rgba(200,200,210,.18) 1px, transparent 1px)",
+        backgroundSize: "18px 18px",
+      }}
+    />
+
+    <div className="relative grid gap-8 md:grid-cols-2 md:items-center">
+      {/* LEFT: image */}
+      <div className="order-2 md:order-1">
+        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-3">
+          <div className="relative overflow-hidden rounded-2xl">
+            <img
+              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80"
+              alt="Gen-Z students studying"
+              className="h-[320px] w-full object-cover sm:h-[360px] md:h-[420px]"
+              loading="lazy"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#141827]/55 via-transparent to-transparent" />
+          </div>
+
+          {/* small badges */}
+          <div className="mt-3 flex flex-wrap gap-2 text-xs text-[color:var(--gen-soft-gray)]">
+            <span className="rounded-full border border-white/10 bg-white/[0.05] px-2 py-1">
+              <span className="text-[color:var(--gen-blueprint)]">●</span> Blueprint
+            </span>
+            <span className="rounded-full border border-white/10 bg-white/[0.05] px-2 py-1">
+              <span className="text-[color:var(--gen-feature)]">●</span> Feature
+            </span>
+            <span className="rounded-full border border-white/10 bg-white/[0.05] px-2 py-1">
+              <span className="text-[color:var(--gen-cta)]">●</span> Growth
+            </span>
+          </div>
+        </div>
+      </div>
+
+      {/* RIGHT: text */}
+      <div className="order-1 md:order-2">
+        <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.05] px-3 py-1 text-xs font-semibold text-[color:var(--gen-soft-gray)]">
+          <span className="h-2 w-2 rounded-full bg-[color:var(--gen-blueprint)]" />
+          Tentang GEN
+        </div>
+
+        <h2 className="mt-4 text-2xl font-extrabold tracking-tight md:text-3xl">
+          About <span className="text-[color:var(--gen-cta)]">GEN</span>
+        </h2>
+
+        <p className="mt-3 text-sm leading-relaxed text-[color:var(--gen-soft-gray)]/90">
+          GEN (Gala Edukasi Nusantara) merupakan platform edukasi yang berfokus pada pendampingan siswa
+          dalam menentukan arah pendidikan tinggi. Melalui rangkaian informasi terstruktur, panduan akademik,
+          dan komunitas siswa yang aktif, GEN mendukung terciptanya ekosistem pendidikan yang inklusif dan
+          mudah diakses. Kami berkomitmen untuk menghadirkan data yang akurat, terkini, dan relevan bagi
+          seluruh pengunjung.
+        </p>
+
+        <div className="mt-5 flex flex-wrap gap-2">
+          <span className="rounded-full border border-white/10 bg-white/[0.05] px-3 py-1 text-xs text-[color:var(--gen-soft-gray)]">
+            Beasiswa Terverifikasi
+          </span>
+          <span className="rounded-full border border-white/10 bg-white/[0.05] px-3 py-1 text-xs text-[color:var(--gen-soft-gray)]">
+            Info Kampus & Jurusan
+          </span>
+          <span className="rounded-full border border-white/10 bg-white/[0.05] px-3 py-1 text-xs text-[color:var(--gen-soft-gray)]">
+            Tryout & Webinar
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section className="mx-auto max-w-6xl px-4 pb-12 sm:px-6">
+  <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur md:p-8">
+    <div className="flex items-center justify-between gap-3">
+      <h3 className="text-xl font-extrabold tracking-tight md:text-2xl">
+        Tujuan <span className="text-[color:var(--gen-cta)]">GEN</span>
+      </h3>
+
+      <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.05] px-3 py-1 text-xs text-[color:var(--gen-soft-gray)]">
+        <Target className="h-4 w-4 text-[color:var(--gen-cta)]" />
+        Fokus
+      </span>
+    </div>
+
+    <div className="mt-6 grid gap-3 md:grid-cols-2">
+      <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+        <div className="flex items-start gap-3">
+          <span className="rounded-2xl border border-white/10 bg-white/[0.05] p-2">
+            <GraduationCap className="h-5 w-5 text-[color:var(--gen-cta)]" />
+          </span>
+          <div>
+            <div className="text-sm font-extrabold">Arah Jurusan & Kampus</div>
+            <p className="mt-1 text-sm text-[color:var(--gen-soft-gray)]/90">
+              Membantu siswa menemukan jurusan, kampus, dan beasiswa yang tepat.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+        <div className="flex items-start gap-3">
+          <span className="rounded-2xl border border-white/10 bg-white/[0.05] p-2">
+            <Wallet className="h-5 w-5 text-[color:var(--gen-blueprint)]" />
+          </span>
+          <div>
+            <div className="text-sm font-extrabold">Edukasi Orang Tua</div>
+            <p className="mt-1 text-sm text-[color:var(--gen-soft-gray)]/90">
+              Membantu orang tua memahami biaya, prospek karier, dan pilihan perguruan tinggi.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+        <div className="flex items-start gap-3">
+          <span className="rounded-2xl border border-white/10 bg-white/[0.05] p-2">
+            <Megaphone className="h-5 w-5 text-[color:var(--gen-feature)]" />
+          </span>
+          <div>
+            <div className="text-sm font-extrabold">Feeder Kampus</div>
+            <p className="mt-1 text-sm text-[color:var(--gen-soft-gray)]/90">
+              Menjadi platform pemasaran dan akuisisi mahasiswa bagi kampus (feeder).
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+        <div className="flex items-start gap-3">
+          <span className="rounded-2xl border border-white/10 bg-white/[0.05] p-2">
+            <Target className="h-5 w-5 text-[color:var(--gen-cta)]" />
+          </span>
+          <div>
+            <div className="text-sm font-extrabold">Portal Terpercaya</div>
+            <p className="mt-1 text-sm text-[color:var(--gen-soft-gray)]/90">
+              Menjadi portal informasi terpercaya untuk dunia pendidikan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+      {/* HIGHLIGHT CAMPUS */}
+      <section className="mx-auto max-w-6xl px-4 pb-12 sm:px-6">
+  <div className="flex items-end justify-between gap-4">
+    <div>
+      <h2 className="text-xl font-extrabold tracking-tight md:text-2xl">
+        Highlight Kampus
+      </h2>
+      <p className="mt-2 text-sm text-[color:var(--gen-soft-gray)]/90">
+        Saat ini GEN berkolaborasi dengan Telkom University (Tel-U).
+      </p>
+    </div>
+
+    <Link
+      className="hidden text-sm font-semibold text-white hover:text-[color:var(--gen-cta)] md:inline-flex"
+      href="/dashboard/kampus"
+    >
+      Lihat dashboard kampus →
+    </Link>
+  </div>
+
+  <div className="mt-5">
+    {/* Highlight Tel-U only */}
+    <Link
+      href="/dashboard/kampus/free/telkom-university"
+      className="group relative block overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur hover:bg-white/[0.06]"
+    >
+      {/* glow */}
+      <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-[color:var(--gen-cta)]/14 blur-3xl" />
+      <div className="pointer-events-none absolute -left-24 -bottom-24 h-64 w-64 rounded-full bg-[color:var(--gen-feature)]/10 blur-3xl" />
+
+      <div className="relative flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
+        <div className="flex items-start gap-4">
+          {/* Logo Tel-U */}
+          <div className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white/[0.06]">
+            <img
+              src="/images/tel-u.svg"
+              alt="Telkom University Logo"
+              className="h-10 w-10 object-contain"
+              loading="lazy"
+            />
+          </div>
+
+          <div>
+            <div className="text-base font-extrabold tracking-tight">
+              Telkom University (Tel-U)
+            </div>
+            <div className="mt-1 text-sm text-[color:var(--gen-soft-gray)]/90">
+              Bandung, Jawa Barat
+            </div>
+            <div className="mt-3 text-sm text-[color:var(--gen-soft-gray)]/90">
+              Kampus kolaborasi resmi GEN untuk informasi jurusan, jalur masuk, beasiswa, dan event PMB.
+            </div>
+
+            <div className="mt-4 flex flex-wrap gap-2 text-xs text-[color:var(--gen-soft-gray)]">
+              {["Informatika", "Sistem Informasi", "DKV", "Manajemen"].map((p) => (
+                <span
+                  key={p}
+                  className="rounded-full border border-white/10 bg-white/[0.05] px-2 py-1"
+                >
+                  {p}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-3 md:flex-col md:items-end">
+          <span className="rounded-full border border-[color:var(--gen-blueprint)]/30 bg-[color:var(--gen-blueprint)]/15 px-2.5 py-1 text-xs font-semibold text-[color:var(--gen-blueprint)]">
+            Spotlight • Partner
+          </span>
+
+          <span className="mt-0 inline-flex items-center gap-2 text-sm font-semibold text-white md:mt-3">
+            Lihat Detail <span className="text-[color:var(--gen-cta)] transition-transform group-hover:translate-x-0.5">→</span>
+          </span>
+        </div>
+      </div>
+    </Link>
+  </div>
+
+  <div className="mt-6">
+    <AdSlot
+      title="Monetisasi • Banner Kampus"
+      description="Kampus kamu ingin tampil di highlight/spotlight GEN? Tersedia paket banner & pendaftaran webinar."
+      ctaLabel="Hubungi Tim GEN"
+      href="mailto:partnership@gen.id?subject=Monetisasi%20Banner%20Kampus%20GEN"
+    />
+  </div>
+</section>
+
+
+      {/* SCHOLARSHIP + EVENT PICK */}
+      <section className="mx-auto max-w-6xl px-4 pb-14 sm:px-6">
+        <div className="grid gap-10 md:grid-cols-2">
+          <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur">
+            <div className="flex items-center justify-between">
+              <h3 className="text-lg font-extrabold tracking-tight">
+                Beasiswa Terbaru
+              </h3>
+              <Link
+                className="text-sm font-semibold text-white hover:text-[color:var(--gen-cta)]"
+                href="/beasiswa"
+              >
+                Lihat semua →
+              </Link>
+            </div>
+
+            <div className="mt-4 grid gap-3">
+              {scholarships.slice(0, 2).map((s) => (
+                <div
+                  key={s.slug}
+                  className="rounded-2xl border border-white/10 bg-white/[0.03] p-4"
+                >
+                  <div className="flex items-center justify-between gap-3">
+                    <div className="text-sm font-extrabold">{s.name}</div>
+                    <span className="text-xs text-[color:var(--gen-soft-gray)]">
+                      {s.status}
+                    </span>
+                  </div>
+                  <div className="mt-1 text-xs text-[color:var(--gen-soft-gray)]/90">
+                    Deadline {s.deadlineISO} • {s.level.join(", ")}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur">
+            <div className="flex items-center justify-between">
+              <h3 className="text-lg font-extrabold tracking-tight">
+                Event Pilihan
+              </h3>
+              <Link
+                className="text-sm font-semibold text-white hover:text-[color:var(--gen-cta)]"
+                href="/event"
+              >
+                Lihat semua →
+              </Link>
+            </div>
+
+            <div className="mt-4 grid gap-3">
+              {events.slice(0, 2).map((e) => (
+                <div
+                  key={e.slug}
+                  className="rounded-2xl border border-white/10 bg-white/[0.03] p-4"
+                >
+                  <div className="flex items-center justify-between gap-3">
+                    <div className="text-sm font-extrabold">{e.title}</div>
+                    <span className="text-xs text-[color:var(--gen-soft-gray)]">
+                      {e.status}
+                    </span>
+                  </div>
+                  <div className="mt-1 text-xs text-[color:var(--gen-soft-gray)]/90">
+                    {e.startISO} • {e.location} • {e.priceLabel}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
