@@ -16,22 +16,6 @@
       "static/chunks/1-789482bab962acfc.js",
       "static/chunks/app/layout-69670f81647a1e85.js"
     ],
-    "/(dashboard)/dashboard/kampus/page": [
-      "static/chunks/webpack-40bc793d27fafbb3.js",
-      "static/chunks/aec749e8-97b57926f8315fe4.js",
-      "static/chunks/59-a99d677752c65258.js",
-      "static/chunks/main-app-053b6813acf1a6fe.js",
-      "static/chunks/1-789482bab962acfc.js",
-      "static/chunks/app/(dashboard)/dashboard/kampus/page-9f026c7bc061ae93.js"
-    ],
-    "/(dashboard)/dashboard/kampus/premium/[slug]/page": [
-      "static/chunks/webpack-40bc793d27fafbb3.js",
-      "static/chunks/aec749e8-97b57926f8315fe4.js",
-      "static/chunks/59-a99d677752c65258.js",
-      "static/chunks/main-app-053b6813acf1a6fe.js",
-      "static/chunks/1-789482bab962acfc.js",
-      "static/chunks/app/(dashboard)/dashboard/kampus/premium/[slug]/page-80487b65f81639d0.js"
-    ],
     "/(public)/artikel/[slug]/page": [
       "static/chunks/webpack-40bc793d27fafbb3.js",
       "static/chunks/aec749e8-97b57926f8315fe4.js",
@@ -49,14 +33,21 @@
       "static/chunks/1-789482bab962acfc.js",
       "static/chunks/app/(dashboard)/dashboard/kampus/free/[slug]/page-2fa7a8dcedb9eee5.js"
     ],
-    "/(public)/event/[slug]/page": [
+    "/(dashboard)/dashboard/kampus/premium/[slug]/page": [
       "static/chunks/webpack-40bc793d27fafbb3.js",
       "static/chunks/aec749e8-97b57926f8315fe4.js",
       "static/chunks/59-a99d677752c65258.js",
       "static/chunks/main-app-053b6813acf1a6fe.js",
       "static/chunks/1-789482bab962acfc.js",
-      "static/chunks/382-699a6c44ba308a57.js",
-      "static/chunks/app/(public)/event/[slug]/page-3d46ee6e756305c2.js"
+      "static/chunks/app/(dashboard)/dashboard/kampus/premium/[slug]/page-80487b65f81639d0.js"
+    ],
+    "/(public)/beasiswa/[slug]/page": [
+      "static/chunks/webpack-40bc793d27fafbb3.js",
+      "static/chunks/aec749e8-97b57926f8315fe4.js",
+      "static/chunks/59-a99d677752c65258.js",
+      "static/chunks/main-app-053b6813acf1a6fe.js",
+      "static/chunks/1-789482bab962acfc.js",
+      "static/chunks/app/(public)/beasiswa/[slug]/page-289ce97d563ec9bc.js"
     ],
     "/(public)/beasiswa/page": [
       "static/chunks/webpack-40bc793d27fafbb3.js",
@@ -66,13 +57,22 @@
       "static/chunks/1-789482bab962acfc.js",
       "static/chunks/app/(public)/beasiswa/page-7fd1f1c2d7c33ad4.js"
     ],
-    "/(public)/beasiswa/[slug]/page": [
+    "/(dashboard)/dashboard/kampus/page": [
       "static/chunks/webpack-40bc793d27fafbb3.js",
       "static/chunks/aec749e8-97b57926f8315fe4.js",
       "static/chunks/59-a99d677752c65258.js",
       "static/chunks/main-app-053b6813acf1a6fe.js",
       "static/chunks/1-789482bab962acfc.js",
-      "static/chunks/app/(public)/beasiswa/[slug]/page-289ce97d563ec9bc.js"
+      "static/chunks/app/(dashboard)/dashboard/kampus/page-9f026c7bc061ae93.js"
+    ],
+    "/(public)/artikel/page": [
+      "static/chunks/webpack-40bc793d27fafbb3.js",
+      "static/chunks/aec749e8-97b57926f8315fe4.js",
+      "static/chunks/59-a99d677752c65258.js",
+      "static/chunks/main-app-053b6813acf1a6fe.js",
+      "static/chunks/1-789482bab962acfc.js",
+      "static/chunks/382-699a6c44ba308a57.js",
+      "static/chunks/app/(public)/artikel/page-1e2755dc880d31a0.js"
     ],
     "/(public)/event/page": [
       "static/chunks/webpack-40bc793d27fafbb3.js",
@@ -83,6 +83,15 @@
       "static/chunks/382-699a6c44ba308a57.js",
       "static/chunks/app/(public)/event/page-25d3bade008eea5b.js"
     ],
+    "/(public)/event/[slug]/page": [
+      "static/chunks/webpack-40bc793d27fafbb3.js",
+      "static/chunks/aec749e8-97b57926f8315fe4.js",
+      "static/chunks/59-a99d677752c65258.js",
+      "static/chunks/main-app-053b6813acf1a6fe.js",
+      "static/chunks/1-789482bab962acfc.js",
+      "static/chunks/382-699a6c44ba308a57.js",
+      "static/chunks/app/(public)/event/[slug]/page-3d46ee6e756305c2.js"
+    ],
     "/upcoming/page": [
       "static/chunks/webpack-40bc793d27fafbb3.js",
       "static/chunks/aec749e8-97b57926f8315fe4.js",
@@ -90,15 +99,6 @@
       "static/chunks/main-app-053b6813acf1a6fe.js",
       "static/chunks/1-789482bab962acfc.js",
       "static/chunks/app/upcoming/page-3f1adf10ed081261.js"
-    ],
-    "/(public)/artikel/page": [
-      "static/chunks/webpack-40bc793d27fafbb3.js",
-      "static/chunks/aec749e8-97b57926f8315fe4.js",
-      "static/chunks/59-a99d677752c65258.js",
-      "static/chunks/main-app-053b6813acf1a6fe.js",
-      "static/chunks/1-789482bab962acfc.js",
-      "static/chunks/382-699a6c44ba308a57.js",
-      "static/chunks/app/(public)/artikel/page-1e2755dc880d31a0.js"
     ],
     "/(public)/page": [
       "static/chunks/webpack-40bc793d27fafbb3.js",
