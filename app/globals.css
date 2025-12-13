@@ -275,3 +275,53 @@ html[data-theme="light"] { color-scheme: light; }
   --gen-dot: rgba(200, 200, 210, 0.18);
   --gen-dot-opacity: 0.22;
 }
+
+.gen-dotbg::before {
+  pointer-events: none;
+}
+
+.gen-dotbg { position: relative; z-index: 0; }
+header { position: sticky; z-index: 40; }
+
+/* ===== DOT BACKGROUND: FIX first-load (no data-theme yet) ===== */
+
+/* default (anggap dark) -> penting supaya refresh langsung muncul */
+:root{
+  --gen-dot: rgba(200, 200, 210, 0.18);
+  --gen-dot-opacity: 0.22;
+}
+
+/* overrides per theme */
+:root[data-theme="light"]{
+  --gen-dot: rgba(15, 23, 42, 0.10);
+  --gen-dot-opacity: 0.25;
+}
+:root[data-theme="dark"]{
+  --gen-dot: rgba(200, 200, 210, 0.18);
+  --gen-dot-opacity: 0.22;
+}
+
+/* dot layer */
+.gen-dotbg{
+  position: relative;
+  isolation: isolate;
+}
+.gen-dotbg::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
+  /* fallback penting supaya tidak invalid saat var belum kebaca */
+  background-image: radial-gradient(
+    var(--gen-dot, rgba(200, 200, 210, 0.18)) 1px,
+    transparent 1px
+  );
+  background-size: 18px 18px;
+  opacity: var(--gen-dot-opacity, 0.22);
+}
+.gen-dotbg > *{
+  position: relative;
+  z-index: 1;
+}
