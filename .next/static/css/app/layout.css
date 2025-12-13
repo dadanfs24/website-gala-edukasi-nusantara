@@ -1186,6 +1186,13 @@
       }
     }
   }
+  .hover\:opacity-80 {
+    &:hover {
+      @media (hover: hover) {
+        opacity: 80%;
+      }
+    }
+  }
   .focus\:border-\[color\:var\(--gen-cta\)\]\/60 {
     &:focus {
       border-color: var(--gen-cta);
