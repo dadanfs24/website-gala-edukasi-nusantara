@@ -650,6 +650,13 @@
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
+  .gap-x-2 {
+    -moz-column-gap: calc(var(--spacing) * 2);
+         column-gap: calc(var(--spacing) * 2);
+  }
+  .gap-y-1 {
+    row-gap: calc(var(--spacing) * 1);
+  }
   .overflow-hidden {
     overflow: hidden;
   }
@@ -1074,6 +1081,9 @@
   }
   .text-white {
     color: var(--color-white);
+  }
+  .opacity-60 {
+    opacity: 60%;
   }
   .blur-3xl {
     --tw-blur: blur(var(--blur-3xl));

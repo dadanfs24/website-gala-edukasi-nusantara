@@ -1,21 +1,18 @@
 import Link from "next/link";
 
 export function SiteFooter() {
-  const linkBase =
-    "transition-colors hover:text-[color:var(--gen-fg)]";
+  const linkBase = "transition-colors hover:text-[color:var(--gen-fg)]";
 
   return (
-    <footer
-      style={{ borderTop: "1px solid var(--gen-border)" }}
-      className="mt-10"
-    >
+    <footer style={{ borderTop: "1px solid var(--gen-border)" }} className="mt-10">
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:px-6 md:grid-cols-3">
         <div>
           <div className="text-lg font-extrabold tracking-tight text-[color:var(--gen-fg)]">
             GEN
           </div>
           <p className="mt-2 text-sm text-[color:var(--gen-soft-gray)]/90">
-            Gala Edukasi Nusantara — platform edukasi untuk membantu siswa menemukan jurusan, kampus, dan beasiswa yang tepat.
+            Gala Edukasi Nusantara — platform edukasi untuk membantu siswa menemukan jurusan,
+            kampus, dan beasiswa yang tepat.
           </p>
         </div>
 
@@ -41,8 +38,19 @@ export function SiteFooter() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-6xl px-4 pb-8 text-xs text-[color:var(--gen-soft-gray)]/80 sm:px-6">
-        © {new Date().getFullYear()} GEN — Gala Edukasi Nusantara. All rights reserved.
+      <div className="mx-auto max-w-6xl px-4 pb-8 sm:px-6">
+        <div className="text-xs text-[color:var(--gen-soft-gray)]/80">
+          © {new Date().getFullYear()} GEN — Gala Edukasi Nusantara. All rights reserved.
+        </div>
+
+        {/* tambahan lucu + credit */}
+        <div className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-[color:var(--gen-soft-gray)]/80">
+          <span>Built with ✨ </span>
+          <span className="opacity-60">•</span>
+          <span>
+            Design by <span className="font-semibold text-[color:var(--gen-fg)]">Naila IGGS 🤍</span>
+          </span>
+        </div>
       </div>
     </footer>
   );
