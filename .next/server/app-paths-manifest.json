@@ -1,7 +1,7 @@
 {
-  "/(public)/page": "app/(public)/page.js",
   "/(public)/artikel/page": "app/(public)/artikel/page.js",
   "/upcoming/page": "app/upcoming/page.js",
   "/(public)/event/page": "app/(public)/event/page.js",
-  "/(public)/beasiswa/page": "app/(public)/beasiswa/page.js"
+  "/(public)/beasiswa/page": "app/(public)/beasiswa/page.js",
+  "/(public)/page": "app/(public)/page.js"
 }
