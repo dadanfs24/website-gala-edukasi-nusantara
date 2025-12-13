@@ -1,29 +1,44 @@
 import Link from "next/link";
 
 export function AdSlot({
-  title = "Monetisasi",
-  description = "Slot untuk banner kampus / artikel promosi / affiliate yang relevan.",
-  ctaLabel = "Hubungi Kami",
-  href = "mailto:partnership@gen.id?subject=Kerja%20Sama%20GEN",
+  title,
+  description,
+  ctaLabel,
+  href,
 }: {
-  title?: string;
-  description?: string;
-  ctaLabel?: string;
-  href?: string;
+  title: string;
+  description: string;
+  ctaLabel: string;
+  href: string;
 }) {
   return (
-    <div className="rounded-2xl border border-white/15 bg-white/[0.03] p-5 md:p-6">
-      <div className="flex flex-wrap items-center justify-between gap-3">
+    <div
+      className="rounded-3xl p-5 backdrop-blur md:p-6"
+      style={{
+        background: "var(--gen-card-bg)",
+        border: "1px solid var(--gen-border)",
+      }}
+    >
+      <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div>
-          <p className="text-sm font-semibold text-[color:var(--gen-soft-gray)]">{title}</p>
-          <p className="mt-1 text-sm text-[color:var(--gen-soft-gray)]/90">{description}</p>
+          <div className="text-sm font-extrabold text-[color:var(--gen-fg)]">
+            {title}
+          </div>
+          <div className="mt-1 text-sm text-[color:var(--gen-fg)]/70">
+            {description}
+          </div>
         </div>
+
         <Link
-          className="inline-flex items-center gap-2 rounded-2xl bg-white px-4 py-2 text-sm font-semibold text-[color:var(--gen-bg)] transition-transform hover:scale-[1.02] active:scale-[0.98]"
           href={href}
+          className="inline-flex items-center justify-center gap-2 rounded-2xl px-5 py-3 text-sm font-semibold transition-transform hover:scale-[1.02] active:scale-[0.98]"
+          style={{
+            background: "var(--gen-fg)",
+            color: "var(--gen-bg)",
+            border: "1px solid var(--gen-border)",
+          }}
         >
-          {ctaLabel}
-          <span className="text-[color:var(--gen-cta)]">→</span>
+          {ctaLabel} <span style={{ color: "var(--gen-cta)" }}>→</span>
         </Link>
       </div>
     </div>

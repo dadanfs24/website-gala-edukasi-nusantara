@@ -35,7 +35,7 @@ export const events: EventItem[] = [
     slug: "pameran-kampus-mini",
     title: "Mini Campus Expo (Offline - Bandung)",
     cover:
-      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=60",
+      "https://images.unsplash.com/photo-1605539586248-f8daad5320e6?auto=format&fit=crop&w=1200&q=60",
     organizer: "Mitra Kampus",
     startISO: "2026-02-02T10:00",
     location: "Offline",
@@ -44,5 +44,5 @@ export const events: EventItem[] = [
     ctaLabel: "Lihat Detail",
     description:
       "Pameran kampus mini untuk konsultasi jurusan dan jalur masuk. Slot promosi event untuk mitra.",
-  },
+  },  
 ];

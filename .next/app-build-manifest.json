@@ -1,112 +1,55 @@
 {
   "pages": {
-    "/_not-found/page": [
-      "static/chunks/webpack-f655fd14de5d2055.js",
-      "static/chunks/9877a5e8-13e3714f3bf27941.js",
-      "static/chunks/267-c74c3939df806174.js",
-      "static/chunks/main-app-129b279437335747.js",
-      "static/chunks/app/_not-found/page-56407ae73c30b448.js"
-    ],
     "/layout": [
-      "static/chunks/webpack-f655fd14de5d2055.js",
-      "static/chunks/9877a5e8-13e3714f3bf27941.js",
-      "static/chunks/267-c74c3939df806174.js",
-      "static/chunks/main-app-129b279437335747.js",
-      "static/css/c9ea324648f5e553.css",
-      "static/chunks/740-2e07a1894e7c2285.js",
-      "static/chunks/app/layout-1e2df5254daa4b67.js"
-    ],
-    "/(dashboard)/dashboard/kampus/free/[slug]/page": [
-      "static/chunks/webpack-f655fd14de5d2055.js",
-      "static/chunks/9877a5e8-13e3714f3bf27941.js",
-      "static/chunks/267-c74c3939df806174.js",
-      "static/chunks/main-app-129b279437335747.js",
-      "static/chunks/740-2e07a1894e7c2285.js",
-      "static/chunks/app/(dashboard)/dashboard/kampus/free/[slug]/page-a17f52663a664d99.js"
-    ],
-    "/(public)/artikel/[slug]/page": [
-      "static/chunks/webpack-f655fd14de5d2055.js",
-      "static/chunks/9877a5e8-13e3714f3bf27941.js",
-      "static/chunks/267-c74c3939df806174.js",
-      "static/chunks/main-app-129b279437335747.js",
-      "static/chunks/740-2e07a1894e7c2285.js",
-      "static/chunks/813-d6097ef925f2d6eb.js",
-      "static/chunks/app/(public)/artikel/[slug]/page-dc850e41bc6ffe41.js"
-    ],
-    "/(public)/artikel/page": [
-      "static/chunks/webpack-f655fd14de5d2055.js",
-      "static/chunks/9877a5e8-13e3714f3bf27941.js",
-      "static/chunks/267-c74c3939df806174.js",
-      "static/chunks/main-app-129b279437335747.js",
-      "static/chunks/740-2e07a1894e7c2285.js",
-      "static/chunks/813-d6097ef925f2d6eb.js",
-      "static/chunks/app/(public)/artikel/page-58ff167bfb8f083b.js"
-    ],
-    "/(dashboard)/dashboard/kampus/page": [
-      "static/chunks/webpack-f655fd14de5d2055.js",
-      "static/chunks/9877a5e8-13e3714f3bf27941.js",
-      "static/chunks/267-c74c3939df806174.js",
-      "static/chunks/main-app-129b279437335747.js",
-      "static/chunks/740-2e07a1894e7c2285.js",
-      "static/chunks/app/(dashboard)/dashboard/kampus/page-ba03f252986d5ece.js"
-    ],
-    "/(public)/beasiswa/page": [
-      "static/chunks/webpack-f655fd14de5d2055.js",
-      "static/chunks/9877a5e8-13e3714f3bf27941.js",
-      "static/chunks/267-c74c3939df806174.js",
-      "static/chunks/main-app-129b279437335747.js",
-      "static/chunks/740-2e07a1894e7c2285.js",
-      "static/chunks/app/(public)/beasiswa/page-bbfbfc40a5c53a7a.js"
-    ],
-    "/(dashboard)/dashboard/kampus/premium/[slug]/page": [
-      "static/chunks/webpack-f655fd14de5d2055.js",
-      "static/chunks/9877a5e8-13e3714f3bf27941.js",
-      "static/chunks/267-c74c3939df806174.js",
-      "static/chunks/main-app-129b279437335747.js",
-      "static/chunks/740-2e07a1894e7c2285.js",
-      "static/chunks/app/(dashboard)/dashboard/kampus/premium/[slug]/page-1741d8e63394e5ec.js"
-    ],
-    "/(public)/beasiswa/[slug]/page": [
-      "static/chunks/webpack-f655fd14de5d2055.js",
-      "static/chunks/9877a5e8-13e3714f3bf27941.js",
-      "static/chunks/267-c74c3939df806174.js",
-      "static/chunks/main-app-129b279437335747.js",
-      "static/chunks/740-2e07a1894e7c2285.js",
-      "static/chunks/app/(public)/beasiswa/[slug]/page-fb52126d5923e6d7.js"
-    ],
-    "/(public)/event/page": [
-      "static/chunks/webpack-f655fd14de5d2055.js",
-      "static/chunks/9877a5e8-13e3714f3bf27941.js",
-      "static/chunks/267-c74c3939df806174.js",
-      "static/chunks/main-app-129b279437335747.js",
-      "static/chunks/740-2e07a1894e7c2285.js",
-      "static/chunks/813-d6097ef925f2d6eb.js",
-      "static/chunks/app/(public)/event/page-774a1ac4a3957e41.js"
-    ],
-    "/(public)/event/[slug]/page": [
-      "static/chunks/webpack-f655fd14de5d2055.js",
-      "static/chunks/9877a5e8-13e3714f3bf27941.js",
-      "static/chunks/267-c74c3939df806174.js",
-      "static/chunks/main-app-129b279437335747.js",
-      "static/chunks/740-2e07a1894e7c2285.js",
-      "static/chunks/813-d6097ef925f2d6eb.js",
-      "static/chunks/app/(public)/event/[slug]/page-5911dbf8517da432.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
     ],
     "/(public)/page": [
-      "static/chunks/webpack-f655fd14de5d2055.js",
-      "static/chunks/9877a5e8-13e3714f3bf27941.js",
-      "static/chunks/267-c74c3939df806174.js",
-      "static/chunks/main-app-129b279437335747.js",
-      "static/chunks/740-2e07a1894e7c2285.js",
-      "static/chunks/app/(public)/page-984d2b63e03677ae.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(public)/page.js"
+    ],
+    "/(public)/beasiswa/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(public)/beasiswa/page.js"
+    ],
+    "/(public)/artikel/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(public)/artikel/page.js"
+    ],
+    "/(public)/event/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(public)/event/page.js"
     ],
     "/upcoming/page": [
-      "static/chunks/webpack-f655fd14de5d2055.js",
-      "static/chunks/9877a5e8-13e3714f3bf27941.js",
-      "static/chunks/267-c74c3939df806174.js",
-      "static/chunks/main-app-129b279437335747.js",
-      "static/chunks/740-2e07a1894e7c2285.js",
-      "static/chunks/app/upcoming/page-881838425eebf8d1.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/upcoming/page.js"
+    ],
+    "/(public)/beasiswa/[slug]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(public)/beasiswa/[slug]/page.js"
+    ],
+    "/(public)/artikel/[slug]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(public)/artikel/[slug]/page.js"
+    ],
+    "/(public)/event/[slug]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(public)/event/[slug]/page.js"
+    ],
+    "/(dashboard)/dashboard/kampus/free/[slug]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(dashboard)/dashboard/kampus/free/[slug]/page.js"
     ]
   }
 }

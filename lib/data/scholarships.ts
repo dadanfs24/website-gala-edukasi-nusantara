@@ -12,6 +12,6 @@ export const scholarships: Scholarship[] = [
     description:
       "Beasiswa Kuliah Gratis 100% hingga lulus di Telkom University",
     requirements: ["Siswa kelas 12 / gap year", "Motivation letter", "Rapor 2 semester terakhir"],
-    link: "https://https://iggsfojb.com/",
+    link: "https://iggsfojb.com/",
   },
 ];

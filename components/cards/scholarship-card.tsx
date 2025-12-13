@@ -1,46 +1,74 @@
 import Link from "next/link";
-import { Scholarship } from "@/lib/types";
+import type { Scholarship } from "@/lib/types";
 import { StatusBadge } from "@/components/ui/badge";
 
 export function ScholarshipCard({ item }: { item: Scholarship }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 backdrop-blur">
-      <div className="flex items-start justify-between gap-4">
+    <div
+      className="rounded-3xl p-6 backdrop-blur transition-colors"
+      style={{
+        background: "var(--gen-card-bg)",
+        border: "1px solid var(--gen-border)",
+      }}
+    >
+      <div className="flex items-start justify-between gap-3">
         <div>
-          <div className="flex flex-wrap items-center gap-2">
-            <h3 className="text-base font-extrabold tracking-tight">{item.name}</h3>
-            {item.isSponsored ? (
-              <span className="rounded-full border border-white/15 bg-white/[0.06] px-2 py-0.5 text-[11px] font-semibold text-[color:var(--gen-soft-gray)]">
-                Sponsored
-              </span>
-            ) : null}
+          <div className="text-base font-extrabold tracking-tight text-[color:var(--gen-fg)]">
+            {item.name}
           </div>
-          <p className="mt-1 text-sm text-[color:var(--gen-soft-gray)]/90">{item.organizer}</p>
+          <div className="mt-1 text-sm text-[color:var(--gen-soft-gray)]/90">
+            {item.organizer}
+          </div>
         </div>
+
         <StatusBadge status={item.status} />
       </div>
 
-      <div className="mt-3 flex flex-wrap gap-2 text-xs text-[color:var(--gen-soft-gray)]">
-        <span className="rounded-full border border-white/10 bg-white/[0.05] px-2 py-1">
+      <div className="mt-4 flex flex-wrap gap-2 text-xs text-[color:var(--gen-soft-gray)]">
+        <span
+          className="rounded-full px-2.5 py-1"
+          style={{
+            background: "var(--gen-pill-bg)",
+            border: "1px solid var(--gen-pill-border)",
+          }}
+        >
           Jenjang: {item.level.join(", ")}
         </span>
-        <span className="rounded-full border border-white/10 bg-white/[0.05] px-2 py-1">
+
+        <span
+          className="rounded-full px-2.5 py-1"
+          style={{
+            background: "var(--gen-pill-bg)",
+            border: "1px solid var(--gen-pill-border)",
+          }}
+        >
           Deadline: {item.deadlineISO}
         </span>
       </div>
 
-      <ul className="mt-3 list-disc pl-5 text-sm text-[color:var(--gen-soft-gray)]/90">
-        {item.benefits.slice(0, 3).map((b) => (
-          <li key={b}>{b}</li>
-        ))}
-      </ul>
+      <p className="mt-4 text-sm leading-relaxed text-[color:var(--gen-soft-gray)]/90">
+        {item.description}
+      </p>
 
-      <div className="mt-4">
+      <div className="mt-5 flex items-center justify-between gap-3">
+      <Link
+  href={`/beasiswa/${item.slug}`}
+  className="text-sm font-semibold text-[color:var(--gen-link-fg)] hover:text-[color:var(--gen-cta)]"
+>
+  Lihat Detail →
+</Link>
+
+
         <Link
           href={`/beasiswa/${item.slug}`}
-          className="inline-flex items-center gap-2 rounded-2xl bg-white px-4 py-2 text-sm font-semibold text-[color:var(--gen-bg)] transition-transform hover:scale-[1.02] active:scale-[0.98]"
+          className="inline-flex items-center gap-2 rounded-2xl px-4 py-2 text-sm font-semibold transition-transform hover:scale-[1.02] active:scale-[0.98]"
+          style={{
+            background: "var(--gen-btn-primary-bg)",
+            color: "var(--gen-btn-primary-fg)",
+            border: "1px solid var(--gen-ad-btn-border)",
+          }}
         >
-          Lihat Detail <span className="text-[color:var(--gen-cta)]">→</span>
+          Detail <span style={{ color: "var(--gen-cta)" }}>→</span>
         </Link>
       </div>
     </div>

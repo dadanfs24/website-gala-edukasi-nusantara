@@ -6,9 +6,12 @@ export default function BeasiswaPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <div>
-        <h1 className="text-3xl font-extrabold tracking-tight md:text-4xl">Beasiswa</h1>
+        <h1 className="text-3xl font-extrabold tracking-tight text-[color:var(--gen-fg)] md:text-4xl">
+          Beasiswa
+        </h1>
         <p className="mt-2 text-sm text-[color:var(--gen-soft-gray)]/90">
-          Setiap beasiswa ditampilkan dalam kartu ringkas: nama, penyelenggara, jenjang, benefit utama, deadline, status, dan CTA.
+          Setiap beasiswa ditampilkan dalam kartu ringkas: nama, penyelenggara, jenjang,
+          benefit utama, deadline, status, dan CTA.
         </p>
       </div>
 

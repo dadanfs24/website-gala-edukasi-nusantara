@@ -1,19 +1,48 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Article } from "@/lib/types";
+import type { Article } from "@/lib/types";
 
 export function ArticleCard({ item }: { item: Article }) {
   return (
-    <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur">
-      <div className="relative aspect-[16/9] w-full">
-        <Image src={item.thumbnail} alt={item.title} fill className="object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+    <Link
+      href={`/artikel/${item.slug}`}
+      className="group overflow-hidden rounded-3xl backdrop-blur transition-colors"
+      style={{
+        background: "var(--gen-card-bg)",
+        border: "1px solid var(--gen-border)",
+      }}
+    >
+      <div className="relative aspect-[16/9] w-full overflow-hidden">
+        <Image
+          src={item.thumbnail}
+          alt={item.title}
+          fill
+          className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+        />
+        {/* overlay agar aman di light/dark */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
+
         <div className="absolute left-4 top-4 flex items-center gap-2">
-          <span className="rounded-full border border-white/15 bg-white/[0.08] px-2 py-1 text-xs font-semibold text-white">
+          <span
+            className="rounded-full px-2 py-1 text-xs font-semibold"
+            style={{
+              background: "rgba(255,255,255,.10)",
+              border: "1px solid rgba(255,255,255,.18)",
+              color: "rgba(255,255,255,.92)",
+            }}
+          >
             {item.category}
           </span>
+
           {item.isSponsored ? (
-            <span className="rounded-full border border-white/15 bg-white/[0.08] px-2 py-1 text-xs font-semibold text-[color:var(--gen-blueprint)]">
+            <span
+              className="rounded-full px-2 py-1 text-xs font-semibold"
+              style={{
+                background: "rgba(255,255,255,.10)",
+                border: "1px solid rgba(255,255,255,.18)",
+                color: "var(--gen-blueprint)",
+              }}
+            >
               Sponsored
             </span>
           ) : null}
@@ -21,18 +50,23 @@ export function ArticleCard({ item }: { item: Article }) {
       </div>
 
       <div className="p-5">
-        <h3 className="text-base font-extrabold tracking-tight">{item.title}</h3>
-        <p className="mt-2 text-sm text-[color:var(--gen-soft-gray)]/90">{item.excerpt}</p>
-        <div className="mt-3 text-xs text-[color:var(--gen-cool-gray)]">
+        <div className="text-base font-extrabold tracking-tight text-[color:var(--gen-fg)]">
+          {item.title}
+        </div>
+
+        <p className="mt-2 text-sm leading-relaxed text-[color:var(--gen-fg)]/70">
+          {item.excerpt}
+        </p>
+
+        <div className="mt-4 text-xs text-[color:var(--gen-fg)]/55">
           {item.author} • {item.publishedISO}
         </div>
 
-        <div className="mt-4">
-          <Link href={`/artikel/${item.slug}`} className="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-[color:var(--gen-cta)]">
-            Selengkapnya <span className="text-[color:var(--gen-cta)]">→</span>
-          </Link>
+        {/* INI yang tadinya "Selengkapnya" putih */}
+        <div className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[color:var(--gen-fg)]/75 group-hover:text-[color:var(--gen-cta)]">
+          Selengkapnya <span className="transition-transform group-hover:translate-x-0.5">→</span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
