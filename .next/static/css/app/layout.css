@@ -1637,6 +1637,16 @@ header {
   position: sticky;
   z-index: 40;
 }
+:root {
+  --gen-btn-primary-bg: rgba(255,255,255,.92);
+  --gen-btn-primary-fg: #0b1020;
+  --gen-btn-primary-border: rgba(255,255,255,.18);
+}
+html[data-theme="light"] {
+  --gen-btn-primary-bg: #0b1220;
+  --gen-btn-primary-fg: #ffffff;
+  --gen-btn-primary-border: rgba(15,23,42,.18);
+}
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
@@ -1849,5 +1859,4 @@ header {
     }
   }
 }
-
 

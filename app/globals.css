@@ -325,3 +325,16 @@ html[data-theme="light"] { color-scheme: light; }
 .gen-dotbg { position: relative; z-index: 0; }
 header { position: sticky; z-index: 40; }
 
+/* DEFAULT = DARK */
+:root{
+  --gen-btn-primary-bg: rgba(255,255,255,.92);
+  --gen-btn-primary-fg: #0b1020;
+  --gen-btn-primary-border: rgba(255,255,255,.18);
+}
+
+/* LIGHT override */
+html[data-theme="light"]{
+  --gen-btn-primary-bg: #0b1220;
+  --gen-btn-primary-fg: #ffffff;
+  --gen-btn-primary-border: rgba(15,23,42,.18);
+}

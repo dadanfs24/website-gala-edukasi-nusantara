@@ -58,27 +58,36 @@ export default function HomePage() {
             </div>
 
             <h1 className="mt-4 text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">
-              Mulai{" "}
-              <span className="text-[color:var(--gen-blueprint)]">
-                Perjalanan
+              Teman Pintar{" "}
+              <span className="text-[color:var(--gen-blueprint)]">Gen Z</span>{" "}
+              <span> dan </span>
+              <span className="text-[color:var(--gen-feature)]">
+                Gen Alpha
               </span>{" "}
-              <span className="text-[color:var(--gen-feature)]">Kuliah</span>{" "}
-              Kamu{" "}
+              Dalam Menyiapkan{" "}
               <span className="text-[color:var(--gen-cta)]">
-                Dengan Informasi yang Tepat
+                Masa Depan Pendidikan
               </span>
             </h1>
 
             <p className="mt-4 text-[15px] leading-relaxed text-[color:var(--gen-soft-gray)]/90">
-              Pendidikan bukan cuma pilih jurusan. Ini tentang masa depan,
-              kesempatan, dan keputusan yang menentukan arah hidup. Di GEN, kami
-              hadir untuk mastiin kamu ngga melangkah sendirian.
+              
+              <span>
+                Banyak siswa merasa bingung saat harus menentukan jurusan,
+                kampus, atau masa depan setelah lulus sekolah. Informasi terasa
+                menumpuk, standar keberhasilan terlihat sama untuk semua orang,
+                dan tekanan untuk "harus sukses" sering datang dari berbagai
+                arah. Gala Edukasi Nusantara (GEN) hadir untuk menemani kamu,
+                bukan menghakimi, bukan memaksa, tapi membantu kamu menemukan
+                jalan pendidikan yang paling masuk akal dan sesuai dengan
+                dirimu.
+              </span>
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
                 href="/beasiswa"
-                className="
+                className=" 
       inline-flex items-center gap-2 rounded-2xl px-5 py-3 font-semibold
       transition-transform hover:scale-[1.02] active:scale-[0.98]
       bg-[color:var(--gen-btn-primary-bg)] text-[color:var(--gen-btn-primary-fg)]
