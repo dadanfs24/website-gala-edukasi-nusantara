@@ -98,7 +98,7 @@ export default function HomePage() {
               </Link>
             </div>
 
-            <div className="mt-6 grid gap-3 sm:grid-cols-3">
+            {/* <div className="mt-6 grid gap-3 sm:grid-cols-3">
               <div className="gen-card-2 rounded-2xl p-4">
                 <div className="text-sm font-extrabold">Terverifikasi</div>
                 <div className="mt-1 text-xs text-[color:var(--gen-soft-gray)]/90">
@@ -117,7 +117,7 @@ export default function HomePage() {
                   Promosi & akuisisi mahasiswa via GEN.
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* RIGHT */}
@@ -163,7 +163,7 @@ export default function HomePage() {
       </section>
 
       {/* QUICK MENU */}
-      <section className="mx-auto max-w-6xl px-4 pb-12 sm:px-6">
+      {/* <section className="mx-auto max-w-6xl px-4 pb-12 sm:px-6">
         <h2 className="text-xl font-extrabold tracking-tight md:text-2xl">
           Menu Cepat
         </h2>
@@ -188,172 +188,776 @@ export default function HomePage() {
             desc="Tryout & webinar: gratis/berbayar."
           />
         </div>
-      </section>
+      </section> */}
 
-      {/* ABOUT */}
-      <section className="mx-auto max-w-6xl px-4 pb-10 sm:px-6">
-        <div
-          className="relative overflow-hidden rounded-3xl gen-border"
-          style={{ background: "var(--gen-card-bg)" }}
+{/* ABOUT (Gen-Z, no image) */}
+<section className="mx-auto max-w-6xl px-4 pb-10 sm:px-6">
+  <div
+    className="relative overflow-hidden rounded-[28px]"
+    style={{
+      background: "var(--gen-card-bg)",
+      border: "1px solid var(--gen-border)",
+      boxShadow: "var(--gen-shadow)",
+    }}
+  >
+    {/* glow */}
+    <div
+      className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full blur-3xl"
+      style={{ background: "color-mix(in srgb, var(--gen-cta) 18%, transparent)" }}
+    />
+    <div
+      className="pointer-events-none absolute -right-24 -bottom-24 h-72 w-72 rounded-full blur-3xl"
+      style={{ background: "color-mix(in srgb, var(--gen-feature) 18%, transparent)" }}
+    />
+
+    <div className="p-6 md:p-10">
+      <div className="flex flex-wrap items-center gap-2">
+        <span
+          className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold"
+          style={{
+            background: "color-mix(in srgb, var(--gen-blueprint) 14%, transparent)",
+            border: "1px solid color-mix(in srgb, var(--gen-blueprint) 28%, transparent)",
+            color: "var(--gen-fg)",
+          }}
         >
-          <div className="p-6 md:p-8">
-            <div className="grid gap-8 md:grid-cols-2 md:items-center">
-              {/* LEFT */}
-              <div className="order-2 md:order-1">
-                <div className="gen-card-2 rounded-3xl p-3">
-                  <div className="relative overflow-hidden rounded-2xl">
-                    <img
-                      src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80"
-                      alt="Gen-Z students studying"
-                      className="h-[320px] w-full object-cover sm:h-[360px] md:h-[420px]"
-                      loading="lazy"
-                    />
-                    <div className="pointer-events-none absolute inset-0 gen-img-overlay" />
-                  </div>
+          💡 Apa Itu GEN?
+        </span>
+        <span
+          className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold"
+          style={{
+            background: "color-mix(in srgb, var(--gen-cta) 12%, transparent)",
+            border: "1px solid color-mix(in srgb, var(--gen-cta) 24%, transparent)",
+            color: "var(--gen-fg)",
+          }}
+        >
+          #GenZFriendly
+        </span>
+      </div>
 
-                  <div className="mt-3 flex flex-wrap gap-2 text-xs text-[color:var(--gen-soft-gray)]">
-                    <span className="gen-pill rounded-full px-2 py-1">
-                      <span className="text-[color:var(--gen-blueprint)]">
-                        ●
-                      </span>{" "}
-                      Blueprint
-                    </span>
-                    <span className="gen-pill rounded-full px-2 py-1">
-                      <span className="text-[color:var(--gen-feature)]">●</span>{" "}
-                      Feature
-                    </span>
-                    <span className="gen-pill rounded-full px-2 py-1">
-                      <span className="text-[color:var(--gen-cta)]">●</span>{" "}
-                      Growth
-                    </span>
-                  </div>
-                </div>
-              </div>
+      <h2 className="mt-4 text-2xl font-extrabold tracking-tight md:text-3xl">
+        Apa Itu{" "}
+        <span
+          style={{
+            background:
+              "linear-gradient(90deg, var(--gen-cta), var(--gen-blueprint), var(--gen-feature))",
+            WebkitBackgroundClip: "text",
+            color: "transparent",
+          }}
+        >
+          Gala Edukasi Nusantara
+        </span>
+        ?
+      </h2>
 
-              {/* RIGHT */}
-              <div className="order-1 md:order-2">
-                <div className="gen-pill inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold text-[color:var(--gen-soft-gray)]">
-                  <span className="h-2 w-2 rounded-full bg-[color:var(--gen-blueprint)]" />
-                  Tentang GEN
-                </div>
+      <div className="mt-4 grid gap-6 md:grid-cols-2 md:items-start">
+        {/* Copy */}
+        <div>
+          <p className="text-sm leading-relaxed md:text-base" style={{ color: "var(--gen-soft-gray)" }}>
+            Gala Edukasi Nusantara adalah platform edukasi mandiri yang dirancang khusus untuk siswa dan generasi muda
+            Indonesia yang ingin melangkah ke pendidikan tinggi dengan lebih siap, sadar, dan percaya diri.
+          </p>
 
-                <h2 className="mt-4 text-2xl font-extrabold tracking-tight md:text-3xl">
-                  About <span className="text-[color:var(--gen-cta)]">GEN</span>
-                </h2>
+          <p className="mt-3 text-sm leading-relaxed md:text-base" style={{ color: "var(--gen-soft-gray)" }}>
+            GEN bukan sekadar website informasi. Kami adalah ruang belajar, ruang diskusi, dan ruang tumbuh untuk kamu
+            yang ingin memahami pilihan, bukan asal ikut tren.
+          </p>
 
-                <p className="mt-3 text-sm leading-relaxed text-[color:var(--gen-soft-gray)]/90">
-                  GEN (Gala Edukasi Nusantara) merupakan platform edukasi yang
-                  berfokus pada pendampingan siswa dalam menentukan arah
-                  pendidikan tinggi. Melalui rangkaian informasi terstruktur,
-                  panduan akademik, dan komunitas siswa yang aktif, GEN
-                  mendukung terciptanya ekosistem pendidikan yang inklusif dan
-                  mudah diakses. Kami berkomitmen untuk menghadirkan data yang
-                  akurat, terkini, dan relevan bagi seluruh pengunjung.
-                </p>
-
-                <div className="mt-5 flex flex-wrap gap-2">
-                  <span className="gen-pill rounded-full px-3 py-1 text-xs text-[color:var(--gen-soft-gray)]">
-                    Beasiswa Terverifikasi
-                  </span>
-                  <span className="gen-pill rounded-full px-3 py-1 text-xs text-[color:var(--gen-soft-gray)]">
-                    Info Kampus & Jurusan
-                  </span>
-                  <span className="gen-pill rounded-full px-3 py-1 text-xs text-[color:var(--gen-soft-gray)]">
-                    Tryout & Webinar
-                  </span>
-                </div>
-              </div>
-            </div>
+          <div
+            className="mt-5 inline-flex items-center gap-2 rounded-2xl px-4 py-3 text-xs sm:text-sm"
+            style={{
+              background: "color-mix(in srgb, var(--gen-card-bg) 72%, transparent)",
+              border: "1px solid var(--gen-border)",
+              color: "color-mix(in srgb, var(--gen-fg) 70%, transparent)",
+            }}
+          >
+            🚀 Biar kamu punya arah, bukan cuma ikut arus.
           </div>
-
-          {/* glows (theme-safe) */}
-          <div className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-[color:var(--gen-cta)]/14 blur-3xl" />
-          <div className="pointer-events-none absolute -right-24 -bottom-24 h-72 w-72 rounded-full bg-[color:var(--gen-feature)]/12 blur-3xl" />
         </div>
-      </section>
 
-      {/* GOALS */}
-      <section className="mx-auto max-w-6xl px-4 pb-12 sm:px-6">
-        <div className="gen-card rounded-3xl p-6 md:p-8">
-          <div className="flex items-center justify-between gap-3">
-            <h3 className="text-xl font-extrabold tracking-tight md:text-2xl">
-              Tujuan <span className="text-[color:var(--gen-cta)]">GEN</span>
-            </h3>
+        {/* Points */}
+        <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-1">
+          {[
+            { e: "🎓", t: "Informasi beasiswa yang jelas dan update" },
+            { e: "🧠", t: "Artikel ringan tapi berbobot tentang jurusan, kampus, dan dunia kerja" },
+            { e: "📊", t: "Tryout dan simulasi untuk mengukur kesiapan diri" },
+            { e: "📅", t: "Event edukasi yang relevan dengan tantangan anak muda hari ini" },
+          ].map((x) => (
+            <div
+              key={x.t}
+              className="flex gap-3 rounded-2xl p-4"
+              style={{
+                background: "color-mix(in srgb, var(--gen-card-bg) 70%, transparent)",
+                border: "1px solid var(--gen-border)",
+              }}
+            >
+              <span className="text-lg">{x.e}</span>
+              <span
+                className="text-sm leading-relaxed"
+                style={{ color: "color-mix(in srgb, var(--gen-fg) 78%, transparent)" }}
+              >
+                {x.t}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <span className="gen-pill inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs text-[color:var(--gen-soft-gray)]">
-              <Target className="h-4 w-4 text-[color:var(--gen-cta)]" />
-              Fokus
+
+
+      {/* SECTION: Visi & Misi GEN (Gen-Z Style) */}
+<section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+  <div className="relative overflow-hidden rounded-[28px] p-6 sm:p-10">
+    {/* glow bg */}
+    <div
+      className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full blur-3xl"
+      style={{ background: "color-mix(in srgb, var(--gen-cta) 22%, transparent)" }}
+    />
+    <div
+      className="pointer-events-none absolute -bottom-24 -right-24 h-72 w-72 rounded-full blur-3xl"
+      style={{ background: "color-mix(in srgb, var(--gen-feature) 22%, transparent)" }}
+    />
+
+    <div
+      className="relative rounded-[24px] p-5 sm:p-8"
+      style={{
+        background: "var(--gen-card-bg)",
+        border: "1px solid var(--gen-border)",
+        boxShadow: "var(--gen-shadow)",
+        backdropFilter: "blur(12px)",
+      }}
+    >
+      {/* header */}
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <div className="flex flex-wrap items-center gap-2">
+          <span
+            className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold"
+            style={{
+              background: "color-mix(in srgb, var(--gen-blueprint) 16%, transparent)",
+              border: "1px solid color-mix(in srgb, var(--gen-blueprint) 30%, transparent)",
+              color: "var(--gen-fg)",
+            }}
+          >
+            ✨ GEN Direction
+          </span>
+
+          <span
+            className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold"
+            style={{
+              background: "color-mix(in srgb, var(--gen-cta) 14%, transparent)",
+              border: "1px solid color-mix(in srgb, var(--gen-cta) 28%, transparent)",
+              color: "var(--gen-fg)",
+            }}
+          >
+            🧠 No Overthinking
+          </span>
+        </div>
+
+        <span className="text-xs" style={{ color: "var(--gen-soft-gray)" }}>
+          Visi • Misi • Values
+        </span>
+      </div>
+
+      <h2
+        className="mt-4 text-2xl font-extrabold tracking-tight sm:text-3xl"
+        style={{ color: "var(--gen-fg)" }}
+      >
+        Visi &{" "}
+        <span
+          style={{
+            background:
+              "linear-gradient(90deg, var(--gen-cta), var(--gen-blueprint), var(--gen-feature))",
+            WebkitBackgroundClip: "text",
+            color: "transparent",
+          }}
+        >
+          Misi GEN
+        </span>
+      </h2>
+
+      <p
+        className="mt-3 max-w-2xl text-sm leading-relaxed sm:text-base"
+        style={{ color: "color-mix(in srgb, var(--gen-fg) 78%, transparent)" }}
+      >
+        Biar kamu nggak cuma “ikut tren”, tapi beneran paham pilihan dan punya arah.
+      </p>
+
+      <div className="mt-7 grid gap-5 md:grid-cols-2">
+        {/* Visi card */}
+        <div
+          className="group rounded-[22px] p-5 sm:p-6 transition-transform duration-200 hover:-translate-y-0.5"
+          style={{
+            background: "color-mix(in srgb, var(--gen-card-bg) 82%, transparent)",
+            border: "1px solid var(--gen-border)",
+          }}
+        >
+          <div className="flex items-center gap-3">
+            <span
+              className="inline-flex h-10 w-10 items-center justify-center rounded-2xl text-lg"
+              style={{
+                background: "color-mix(in srgb, var(--gen-blueprint) 18%, transparent)",
+                border: "1px solid color-mix(in srgb, var(--gen-blueprint) 32%, transparent)",
+              }}
+            >
+              🎯
             </span>
+            <div>
+              <div className="text-sm font-extrabold" style={{ color: "var(--gen-fg)" }}>
+                Visi
+              </div>
+              <div className="text-xs" style={{ color: "var(--gen-soft-gray)" }}>
+                Big picture GEN
+              </div>
+            </div>
           </div>
 
-          <div className="mt-6 grid gap-3 md:grid-cols-2">
-            <div className="gen-card-2 rounded-2xl p-5">
-              <div className="flex items-start gap-3">
-                <span className="gen-pill rounded-2xl p-2">
-                  <GraduationCap className="h-5 w-5 text-[color:var(--gen-cta)]" />
-                </span>
-                <div>
-                  <div className="text-sm font-extrabold">
-                    Arah Jurusan & Kampus
-                  </div>
-                  <p className="mt-1 text-sm text-[color:var(--gen-soft-gray)]/90">
-                    Membantu siswa menemukan jurusan, kampus, dan beasiswa yang
-                    tepat.
-                  </p>
-                </div>
+          <p
+            className="mt-4 text-sm leading-relaxed sm:text-base"
+            style={{ color: "color-mix(in srgb, var(--gen-fg) 82%, transparent)" }}
+          >
+            Membantu generasi muda Indonesia menemukan arah pendidikan yang tepat, tanpa harus
+            kehilangan jati diri.
+          </p>
+
+          <div className="mt-4 flex flex-wrap gap-2">
+            {["Arah jelas", "Tetap jadi diri sendiri", "Langkah realistis"].map((t) => (
+              <span
+                key={t}
+                className="rounded-full px-3 py-1 text-xs font-semibold"
+                style={{
+                  background: "color-mix(in srgb, var(--gen-card-bg) 70%, transparent)",
+                  border: "1px solid var(--gen-border)",
+                  color: "var(--gen-fg)",
+                }}
+              >
+                {t}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Misi card */}
+        <div
+          className="rounded-[22px] p-5 sm:p-6"
+          style={{
+            background: "color-mix(in srgb, var(--gen-card-bg) 82%, transparent)",
+            border: "1px solid var(--gen-border)",
+          }}
+        >
+          <div className="flex items-center gap-3">
+            <span
+              className="inline-flex h-10 w-10 items-center justify-center rounded-2xl text-lg"
+              style={{
+                background: "color-mix(in srgb, var(--gen-cta) 18%, transparent)",
+                border: "1px solid color-mix(in srgb, var(--gen-cta) 32%, transparent)",
+              }}
+            >
+              🧩
+            </span>
+            <div>
+              <div className="text-sm font-extrabold" style={{ color: "var(--gen-fg)" }}>
+                Misi
+              </div>
+              <div className="text-xs" style={{ color: "var(--gen-soft-gray)" }}>
+                Yang GEN lakukan tiap hari
               </div>
             </div>
+          </div>
 
-            <div className="gen-card-2 rounded-2xl p-5">
-              <div className="flex items-start gap-3">
-                <span className="gen-pill rounded-2xl p-2">
-                  <Wallet className="h-5 w-5 text-[color:var(--gen-blueprint)]" />
+          <ul className="mt-4 grid gap-3">
+            {[
+              { e: "🧾", t: "Menyajikan informasi pendidikan yang jujur, relevan, dan mudah dipahami" },
+              { e: "🔍", t: "Membantu siswa mengenal potensi, minat, dan pilihan masa depan" },
+              { e: "🧭", t: "Mendampingi proses persiapan masuk perguruan tinggi" },
+              { e: "🤝", t: "Mengajak orang tua menjadi support system, bukan sumber tekanan" },
+              { e: "💼", t: "Menghubungkan pendidikan dengan realita dunia kerja" },
+            ].map((x) => (
+              <li
+                key={x.t}
+                className="flex gap-3 rounded-2xl p-4"
+                style={{
+                  background: "color-mix(in srgb, var(--gen-card-bg) 70%, transparent)",
+                  border: "1px solid var(--gen-border)",
+                }}
+              >
+                <span className="text-lg">{x.e}</span>
+                <span
+                  className="text-sm leading-relaxed sm:text-base"
+                  style={{ color: "color-mix(in srgb, var(--gen-fg) 82%, transparent)" }}
+                >
+                  {x.t}
                 </span>
-                <div>
-                  <div className="text-sm font-extrabold">
-                    Edukasi Orang Tua
-                  </div>
-                  <p className="mt-1 text-sm text-[color:var(--gen-soft-gray)]/90">
-                    Membantu orang tua memahami biaya, prospek karier, dan
-                    pilihan perguruan tinggi.
-                  </p>
-                </div>
-              </div>
-            </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
 
-            <div className="gen-card-2 rounded-2xl p-5">
-              <div className="flex items-start gap-3">
-                <span className="gen-pill rounded-2xl p-2">
-                  <Megaphone className="h-5 w-5 text-[color:var(--gen-feature)]" />
-                </span>
-                <div>
-                  <div className="text-sm font-extrabold">Feeder Kampus</div>
-                  <p className="mt-1 text-sm text-[color:var(--gen-soft-gray)]/90">
-                    Menjadi platform pemasaran dan akuisisi mahasiswa bagi
-                    kampus (feeder).
-                  </p>
-                </div>
-              </div>
-            </div>
+      {/* little fun line */}
+      <div
+        className="mt-6 flex flex-wrap items-center justify-between gap-3 rounded-2xl px-4 py-3 text-xs sm:text-sm"
+        style={{
+          background: "color-mix(in srgb, var(--gen-card-bg) 72%, transparent)",
+          border: "1px solid var(--gen-border)",
+          color: "color-mix(in srgb, var(--gen-fg) 70%, transparent)",
+        }}
+      >
+        <span>💡 GEN = “pilih pakai data, bukan pakai panik.”</span>
+        <span style={{ color: "var(--gen-soft-gray)" }}>#GenZFriendly</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <div className="gen-card-2 rounded-2xl p-5">
-              <div className="flex items-start gap-3">
-                <span className="gen-pill rounded-2xl p-2">
-                  <Target className="h-5 w-5 text-[color:var(--gen-cta)]" />
-                </span>
-                <div>
-                  <div className="text-sm font-extrabold">
-                    Portal Terpercaya
-                  </div>
-                  <p className="mt-1 text-sm text-[color:var(--gen-soft-gray)]/90">
-                    Menjadi portal informasi terpercaya untuk dunia pendidikan.
-                  </p>
-                </div>
-              </div>
+
+
+{/* WHY GEN-Z */}
+<section className="mx-auto max-w-6xl px-4 pb-12 sm:px-6">
+  <div className="relative overflow-hidden gen-card rounded-[28px] p-6 md:p-10">
+    {/* glow */}
+    <div
+      className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full blur-3xl"
+      style={{ background: "color-mix(in srgb, var(--gen-cta) 16%, transparent)" }}
+    />
+    <div
+      className="pointer-events-none absolute -right-24 -bottom-24 h-72 w-72 rounded-full blur-3xl"
+      style={{ background: "color-mix(in srgb, var(--gen-feature) 14%, transparent)" }}
+    />
+
+    {/* header */}
+    <div className="flex flex-wrap items-start justify-between gap-4">
+      <div className="min-w-0">
+        <div className="flex flex-wrap items-center gap-2">
+          <span
+            className="gen-pill inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold"
+            style={{ color: "var(--gen-soft-gray)" }}
+          >
+            🧠 Gen-Z & Gen-Alpha Friendly
+          </span>
+          <span
+            className="gen-pill inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold"
+            style={{ color: "var(--gen-soft-gray)" }}
+          >
+            ✨ Relatable • Clear • Safe
+          </span>
+        </div>
+
+        <h3 className="mt-3 text-xl font-extrabold tracking-tight md:text-2xl">
+          Kenapa{" "}
+          <span
+            style={{
+              background:
+                "linear-gradient(90deg, var(--gen-cta), var(--gen-blueprint), var(--gen-feature))",
+              WebkitBackgroundClip: "text",
+              color: "transparent",
+            }}
+          >
+            GEN
+          </span>{" "}
+          Cocok untuk Gen Z & Gen Alpha?
+        </h3>
+
+        <p className="mt-2 text-sm" style={{ color: "var(--gen-soft-gray)" }}>
+          Biar kamu nggak cuma ikut tren—tapi paham pilihan dan percaya diri jalaninnya.
+        </p>
+      </div>
+
+      <span
+        className="gen-pill inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold"
+        style={{ color: "var(--gen-soft-gray)" }}
+      >
+        💬 Study buddy vibes
+      </span>
+    </div>
+
+    {/* cards */}
+    <div className="mt-6 grid gap-3 md:grid-cols-2">
+      {/* 1 */}
+      <div className="group gen-card-2 rounded-2xl p-5 transition-transform hover:-translate-y-0.5">
+        <div className="flex items-start gap-3">
+          <span
+            className="gen-pill rounded-2xl px-3 py-2 text-sm font-extrabold"
+            style={{ color: "var(--gen-cta)" }}
+          >
+            1
+          </span>
+          <div className="min-w-0">
+            <div className="text-sm font-extrabold">Bahasanya Ngobrol, Bukan Menggurui</div>
+            <p className="mt-1 text-sm" style={{ color: "var(--gen-soft-gray)" }}>
+              GEN pakai bahasa yang dekat sama keseharian Gen Z: serius, tapi tetap santai dan relatable.
+            </p>
+            <div className="mt-3 flex flex-wrap gap-2 text-xs" style={{ color: "var(--gen-soft-gray)" }}>
+              <span className="gen-pill rounded-full px-2 py-1">Relatable</span>
+              <span className="gen-pill rounded-full px-2 py-1">Simple</span>
+              <span className="gen-pill rounded-full px-2 py-1">No ribet</span>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+
+      {/* 2 */}
+      <div className="group gen-card-2 rounded-2xl p-5 transition-transform hover:-translate-y-0.5">
+        <div className="flex items-start gap-3">
+          <span
+            className="gen-pill rounded-2xl px-3 py-2 text-sm font-extrabold"
+            style={{ color: "var(--gen-blueprint)" }}
+          >
+            2
+          </span>
+          <div className="min-w-0">
+            <div className="text-sm font-extrabold">Fokus ke Proses, Bukan Cuma Hasil</div>
+            <p className="mt-1 text-sm" style={{ color: "var(--gen-soft-gray)" }}>
+              Masuk kampus favorit itu penting. Tapi lebih penting: kamu tahu alasan memilihnya dan siap menjalaninya.
+            </p>
+            <div className="mt-3 flex flex-wrap gap-2 text-xs" style={{ color: "var(--gen-soft-gray)" }}>
+              <span className="gen-pill rounded-full px-2 py-1">Mindset</span>
+              <span className="gen-pill rounded-full px-2 py-1">Plan</span>
+              <span className="gen-pill rounded-full px-2 py-1">Consistency</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* 3 */}
+      <div className="group gen-card-2 rounded-2xl p-5 transition-transform hover:-translate-y-0.5">
+        <div className="flex items-start gap-3">
+          <span
+            className="gen-pill rounded-2xl px-3 py-2 text-sm font-extrabold"
+            style={{ color: "var(--gen-feature)" }}
+          >
+            3
+          </span>
+          <div className="min-w-0">
+            <div className="text-sm font-extrabold">Aman dari Informasi Palsu</div>
+            <p className="mt-1 text-sm" style={{ color: "var(--gen-soft-gray)" }}>
+              Info di GEN diseleksi dan dirangkum biar kamu nggak salah langkah dan nggak buang waktu.
+            </p>
+            <div className="mt-3 flex flex-wrap gap-2 text-xs" style={{ color: "var(--gen-soft-gray)" }}>
+              <span className="gen-pill rounded-full px-2 py-1">Terverifikasi</span>
+              <span className="gen-pill rounded-full px-2 py-1">Ringkas</span>
+              <span className="gen-pill rounded-full px-2 py-1">Update</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* 4 */}
+      <div className="group gen-card-2 rounded-2xl p-5 transition-transform hover:-translate-y-0.5">
+        <div className="flex items-start gap-3">
+          <span
+            className="gen-pill rounded-2xl px-3 py-2 text-sm font-extrabold"
+            style={{ color: "var(--gen-cta)" }}
+          >
+            4
+          </span>
+          <div className="min-w-0">
+            <div className="text-sm font-extrabold">Kamu Nggak Sendirian</div>
+            <p className="mt-1 text-sm" style={{ color: "var(--gen-soft-gray)" }}>
+              GEN hadir sebagai teman belajar—bukan kompetitor, bukan penilai. Kamu ditemenin, bukan dibandingin.
+            </p>
+            <div className="mt-3 flex flex-wrap gap-2 text-xs" style={{ color: "var(--gen-soft-gray)" }}>
+              <span className="gen-pill rounded-full px-2 py-1">Supportive</span>
+              <span className="gen-pill rounded-full px-2 py-1">Safe space</span>
+              <span className="gen-pill rounded-full px-2 py-1">Grow bareng</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* WHAT YOU GET + WHO IT'S FOR */}
+<section className="mx-auto max-w-6xl px-4 pb-12 sm:px-6">
+  <div className="relative overflow-hidden gen-card rounded-[28px] p-6 md:p-10">
+    {/* glows */}
+    <div
+      className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full blur-3xl"
+      style={{ background: "color-mix(in srgb, var(--gen-blueprint) 14%, transparent)" }}
+    />
+    <div
+      className="pointer-events-none absolute -right-24 -bottom-24 h-72 w-72 rounded-full blur-3xl"
+      style={{ background: "color-mix(in srgb, var(--gen-cta) 14%, transparent)" }}
+    />
+
+    {/* header */}
+    <div className="flex flex-wrap items-start justify-between gap-4">
+      <div className="min-w-0">
+        <div className="flex flex-wrap items-center gap-2">
+          <span
+            className="gen-pill inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold"
+            style={{ color: "var(--gen-soft-gray)" }}
+          >
+            🎁 Benefit GEN
+          </span>
+          <span
+            className="gen-pill inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold"
+            style={{ color: "var(--gen-soft-gray)" }}
+          >
+            👥 Buat siapa?
+          </span>
+        </div>
+
+        <h3 className="mt-3 text-xl font-extrabold tracking-tight md:text-2xl">
+          Apa Saja yang Bisa Kamu Dapatkan di{" "}
+          <span
+            style={{
+              background:
+                "linear-gradient(90deg, var(--gen-cta), var(--gen-blueprint), var(--gen-feature))",
+              WebkitBackgroundClip: "text",
+              color: "transparent",
+            }}
+          >
+            GEN
+          </span>
+          ?
+        </h3>
+
+        <p className="mt-2 text-sm" style={{ color: "var(--gen-soft-gray)" }}>
+          Semua dibuat biar kamu paham langkahnya—tanpa overthinking berlebihan.
+        </p>
+      </div>
+
+      <span
+        className="gen-pill inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold"
+        style={{ color: "var(--gen-soft-gray)" }}
+      >
+        ✨ Clear • Relatable • Useful
+      </span>
+    </div>
+
+    {/* 4 feature cards */}
+    <div className="mt-6 grid gap-3 md:grid-cols-2">
+      <div className="group gen-card-2 rounded-2xl p-5 transition-transform hover:-translate-y-0.5">
+        <div className="flex items-start gap-3">
+          <span className="gen-pill rounded-2xl px-3 py-2 text-lg">🎓</span>
+          <div className="min-w-0">
+            <div className="text-sm font-extrabold">Informasi Beasiswa</div>
+            <p className="mt-1 text-sm" style={{ color: "var(--gen-soft-gray)" }}>
+              Update beasiswa lokal & internasional lengkap dengan syarat, jadwal, dan tips lolos.
+            </p>
+            <div className="mt-3 flex flex-wrap gap-2 text-xs" style={{ color: "var(--gen-soft-gray)" }}>
+              <span className="gen-pill rounded-full px-2 py-1">Syarat</span>
+              <span className="gen-pill rounded-full px-2 py-1">Deadline</span>
+              <span className="gen-pill rounded-full px-2 py-1">Tips lolos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="group gen-card-2 rounded-2xl p-5 transition-transform hover:-translate-y-0.5">
+        <div className="flex items-start gap-3">
+          <span className="gen-pill rounded-2xl px-3 py-2 text-lg">📚</span>
+          <div className="min-w-0">
+            <div className="text-sm font-extrabold">Artikel Edukasi</div>
+            <p className="mt-1 text-sm" style={{ color: "var(--gen-soft-gray)" }}>
+              Dari cara milih jurusan, tips UTBK, sampai insight dunia kerja masa depan.
+            </p>
+            <div className="mt-3 flex flex-wrap gap-2 text-xs" style={{ color: "var(--gen-soft-gray)" }}>
+              <span className="gen-pill rounded-full px-2 py-1">Jurusan</span>
+              <span className="gen-pill rounded-full px-2 py-1">UTBK</span>
+              <span className="gen-pill rounded-full px-2 py-1">Career</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="group gen-card-2 rounded-2xl p-5 transition-transform hover:-translate-y-0.5">
+        <div className="flex items-start gap-3">
+          <span className="gen-pill rounded-2xl px-3 py-2 text-lg">🧠</span>
+          <div className="min-w-0">
+            <div className="text-sm font-extrabold">Tryout & Simulasi</div>
+            <p className="mt-1 text-sm" style={{ color: "var(--gen-soft-gray)" }}>
+              Buat kamu yang pengin tahu posisi kemampuanmu sekarang, tanpa drama.
+            </p>
+            <div className="mt-3 flex flex-wrap gap-2 text-xs" style={{ color: "var(--gen-soft-gray)" }}>
+              <span className="gen-pill rounded-full px-2 py-1">Progress</span>
+              <span className="gen-pill rounded-full px-2 py-1">Evaluasi</span>
+              <span className="gen-pill rounded-full px-2 py-1">Pembahasan</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="group gen-card-2 rounded-2xl p-5 transition-transform hover:-translate-y-0.5">
+        <div className="flex items-start gap-3">
+          <span className="gen-pill rounded-2xl px-3 py-2 text-lg">🎤</span>
+          <div className="min-w-0">
+            <div className="text-sm font-extrabold">Event & Webinar</div>
+            <p className="mt-1 text-sm" style={{ color: "var(--gen-soft-gray)" }}>
+              Belajar langsung dari mentor, praktisi, dan orang-orang yang sudah lebih dulu lewat jalan ini.
+            </p>
+            <div className="mt-3 flex flex-wrap gap-2 text-xs" style={{ color: "var(--gen-soft-gray)" }}>
+              <span className="gen-pill rounded-full px-2 py-1">Mentor</span>
+              <span className="gen-pill rounded-full px-2 py-1">Praktisi</span>
+              <span className="gen-pill rounded-full px-2 py-1">Live</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* who it's for */}
+    <div className="mt-6 gen-card-2 rounded-2xl p-5">
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <div className="text-sm font-extrabold">Siapa yang Paling Cocok Gabung di GEN?</div>
+        <span
+          className="gen-pill inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold"
+          style={{ color: "var(--gen-soft-gray)" }}
+        >
+          ✅ You belong here
+        </span>
+      </div>
+
+      <div className="mt-4 grid gap-2 md:grid-cols-2">
+        {[
+          "Siswa SMA/SMK yang lagi mikir masa depan",
+          "Pejuang UTBK dan seleksi kampus",
+          "Anak muda yang pengin kuliah dengan tujuan jelas",
+          "Orang tua yang ingin jadi partner putra/putrinya, bukan pemberi pressure",
+        ].map((t) => (
+          <div
+            key={t}
+            className="gen-pill rounded-2xl px-4 py-3 text-sm"
+            style={{ color: "var(--gen-soft-gray)" }}
+          >
+            <span className="mr-2" style={{ color: "var(--gen-cta)" }}>
+              ●
+            </span>
+            {t}
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* COMMITMENT + CTA */}
+<section className="mx-auto max-w-6xl px-4 pb-12 sm:px-6">
+  <div className="relative overflow-hidden gen-card rounded-[28px] p-6 md:p-10">
+    {/* glows */}
+    <div
+      className="pointer-events-none absolute -left-28 -top-28 h-80 w-80 rounded-full blur-3xl"
+      style={{ background: "color-mix(in srgb, var(--gen-feature) 14%, transparent)" }}
+    />
+    <div
+      className="pointer-events-none absolute -right-28 -bottom-28 h-80 w-80 rounded-full blur-3xl"
+      style={{ background: "color-mix(in srgb, var(--gen-cta) 14%, transparent)" }}
+    />
+
+    {/* header */}
+    <div className="flex flex-wrap items-start justify-between gap-4">
+      <div className="min-w-0">
+        <span
+          className="gen-pill inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold"
+          style={{ color: "var(--gen-soft-gray)" }}
+        >
+          💛 Komitmen GEN
+        </span>
+
+        <h3 className="mt-3 text-xl font-extrabold tracking-tight md:text-2xl">
+          Komitmen GEN untuk{" "}
+          <span
+            style={{
+              background:
+                "linear-gradient(90deg, var(--gen-cta), var(--gen-blueprint), var(--gen-feature))",
+              WebkitBackgroundClip: "text",
+              color: "transparent",
+            }}
+          >
+            Kamu
+          </span>
+        </h3>
+
+        <p className="mt-2 max-w-3xl text-sm" style={{ color: "var(--gen-soft-gray)" }}>
+          GEN percaya: setiap orang punya jalan suksesnya sendiri. Kami nggak menjanjikan jalan instan,
+          tapi kami siap nemenin prosesmu supaya lebih terarah, realistis, dan sesuai dengan dirimu.
+        </p>
+      </div>
+
+      <span
+        className="gen-pill inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold"
+        style={{ color: "var(--gen-soft-gray)" }}
+      >
+        ✨ Real talk, real help
+      </span>
+    </div>
+
+    {/* fun highlight */}
+    <div className="mt-6 gen-card-2 rounded-2xl p-5">
+      <div className="flex flex-wrap items-center gap-3">
+        <span className="gen-pill rounded-2xl px-3 py-2 text-lg">✨</span>
+        <div className="min-w-0">
+          <div className="text-sm font-extrabold">Saatnya Kamu Mulai</div>
+          <p className="mt-1 text-sm" style={{ color: "var(--gen-soft-gray)" }}>
+            Nggak harus sempurna untuk mulai. Yang penting berani cari tahu.
+          </p>
+        </div>
+      </div>
+
+      {/* explore chips */}
+      <div className="mt-4 grid gap-2 md:grid-cols-3">
+        <div className="gen-pill rounded-2xl px-4 py-3 text-sm" style={{ color: "var(--gen-soft-gray)" }}>
+          <span className="mr-2">📰</span> Artikel edukasi yang relate sama kondisi kamu
+        </div>
+        <div className="gen-pill rounded-2xl px-4 py-3 text-sm" style={{ color: "var(--gen-soft-gray)" }}>
+          <span className="mr-2">🎓</span> Info beasiswa yang mungkin cocok buatmu
+        </div>
+        <div className="gen-pill rounded-2xl px-4 py-3 text-sm" style={{ color: "var(--gen-soft-gray)" }}>
+          <span className="mr-2">🎤</span> Event & tryout biar kamu lebih siap
+        </div>
+      </div>
+
+      {/* CTAs */}
+      <div className="mt-5 flex flex-wrap gap-3">
+        <Link
+          href="/artikel"
+          className="inline-flex items-center justify-center gap-2 rounded-2xl px-5 py-3 text-sm font-semibold transition-transform hover:scale-[1.02] active:scale-[0.98]"
+          style={{
+            background: "var(--gen-btn-primary-bg)",
+            color: "var(--gen-btn-primary-fg)",
+            border: "1px solid var(--gen-btn-primary-border)",
+          }}
+        >
+          Jelajahi Artikel <span style={{ color: "var(--gen-cta)" }}>→</span>
+        </Link>
+
+        <Link
+          href="/beasiswa"
+          className="inline-flex items-center justify-center gap-2 rounded-2xl px-5 py-3 text-sm font-semibold"
+          style={{
+            background: "var(--gen-btn-ghost-bg)",
+            color: "var(--gen-btn-ghost-fg)",
+            border: "1px solid var(--gen-btn-ghost-border)",
+          }}
+        >
+          Cek Beasiswa
+        </Link>
+
+        <Link
+          href="/event"
+          className="inline-flex items-center justify-center gap-2 rounded-2xl px-5 py-3 text-sm font-semibold"
+          style={{
+            background: "var(--gen-btn-ghost-bg)",
+            color: "var(--gen-btn-ghost-fg)",
+            border: "1px solid var(--gen-btn-ghost-border)",
+          }}
+        >
+          Lihat Event
+        </Link>
+      </div>
+
+      <p className="mt-4 text-xs" style={{ color: "color-mix(in srgb, var(--gen-soft-gray) 88%, transparent)" }}>
+        👉 Jelajahi menu Artikel, Beasiswa, dan Event di Gala Edukasi Nusantara. Karena masa depanmu terlalu berharga
+        untuk ditentukan asal-asalan.
+      </p>
+    </div>
+  </div>
+</section>
+
+
 
       {/* HIGHLIGHT CAMPUS */}
       <section className="mx-auto max-w-6xl px-4 pb-12 sm:px-6">

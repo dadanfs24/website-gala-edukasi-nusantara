@@ -124,7 +124,7 @@ export function SiteHeader() {
             </Link>
 
             {/* Gabung (desktop) */}
-            <Link
+            {/* <Link
               href="/upcoming"
               className="hidden sm:inline-flex items-center gap-2 rounded-2xl px-3 py-2 text-sm font-semibold transition-colors"
               style={{
@@ -134,7 +134,7 @@ export function SiteHeader() {
               }}
             >
               Gabung Yuk
-            </Link>
+            </Link> */}
 
             {/* Hamburger (mobile) */}
             <button
@@ -241,7 +241,7 @@ export function SiteHeader() {
                       Cari Beasiswa <span style={{ color: "var(--gen-cta)" }}>→</span>
                     </Link>
 
-                    <Link
+                    {/* <Link
                       href="/upcoming"
                       onClick={() => setOpen(false)}
                       className="inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-3 text-sm font-semibold"
@@ -252,7 +252,7 @@ export function SiteHeader() {
                       }}
                     >
                       Gabung Yuk
-                    </Link>
+                    </Link> */}
                   </div>
 
                   <div className="mt-6 text-xs" style={{ color: "var(--gen-soft-gray)" }}>
