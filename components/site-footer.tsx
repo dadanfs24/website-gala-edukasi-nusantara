@@ -48,7 +48,7 @@ export function SiteFooter() {
           <span>Built with ✨ </span>
           <span className="opacity-60">•</span>
           <span>
-            Design by <span className="font-semibold text-[color:var(--gen-fg)]">Naila IGGS 🤍</span>
+            Design by <span className="font-semibold text-[color:var(--gen-fg)]">Tim Gala Edukasi Nusantara</span>
           </span>
         </div>
       </div>
