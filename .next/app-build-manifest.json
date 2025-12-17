@@ -20,6 +20,26 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(public)/artikel/[slug]/page.js"
+    ],
+    "/(public)/beasiswa/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(public)/beasiswa/page.js"
+    ],
+    "/(public)/beasiswa/[slug]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(public)/beasiswa/[slug]/page.js"
+    ],
+    "/(public)/event/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(public)/event/page.js"
+    ],
+    "/(public)/event/[slug]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(public)/event/[slug]/page.js"
     ]
   }
 }

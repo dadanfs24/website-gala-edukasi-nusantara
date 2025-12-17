@@ -1,340 +1,161 @@
 @import "tailwindcss";
 
-/* default: follow system */
+/* =========================================
+   THEME TOKENS (DEFAULT = DARK)
+   ========================================= */
 :root {
-  color-scheme: light dark;
+  color-scheme: dark;
+
+  /* base */
+  --gen-bg: #0b1020;
+  --gen-fg: #e9eefc;
+  --gen-soft-gray: rgba(233, 238, 252, 0.78);
+  --gen-cool-gray: #9fa3ad;
+
+  /* brand */
+  --gen-cta: #4cc6e3;
+  --gen-blueprint: #f2c94c;
+  --gen-feature: #ff6b6b;
+
+  /* surfaces */
+  --gen-card-bg: rgba(255, 255, 255, 0.04);
+  --gen-card-bg-2: rgba(255, 255, 255, 0.03);
+  --gen-card-hover: rgba(255, 255, 255, 0.06);
+  --gen-border: rgba(255, 255, 255, 0.12);
+  --gen-border-2: rgba(255, 255, 255, 0.16);
+
+  /* pills */
+  --gen-pill-bg: rgba(255, 255, 255, 0.06);
+  --gen-pill-border: rgba(255, 255, 255, 0.15);
+
+  /* shadows / overlay */
+  --gen-shadow: 0 14px 55px rgba(76, 198, 227, 0.18),
+    0 10px 28px rgba(0, 0, 0, 0.35);
+  --gen-overlay: rgba(20, 24, 39, 0.6);
+
+  /* buttons */
+  --gen-btn-primary-bg: rgba(255, 255, 255, 0.92);
+  --gen-btn-primary-fg: var(--gen-bg);
+  --gen-btn-primary-border: rgba(255, 255, 255, 0.18);
+
+  --gen-btn-ghost-bg: rgba(255, 255, 255, 0.06);
+  --gen-btn-ghost-fg: #ffffff;
+  --gen-btn-ghost-border: rgba(255, 255, 255, 0.15);
+
+  /* dots (DEFAULT must exist even before data-theme) */
+  --gen-dot: rgba(200, 200, 210, 0.18);
+  --gen-dot-opacity: 0.22;
 }
 
-/* ========== THEME TOKENS ========== */
-/* Dark */
-:root[data-theme="dark"]{
-  --gen-bg: #141827;        /* Midnight Navy */
-  --gen-fg: #FFFFFF;        /* White */
-  --gen-blueprint: #D6B24A; /* Soft Yellow */
-  --gen-feature: #D67A62;   /* Muted Coral */
-  --gen-cta: #4CC6E3;       /* Sky Blue */
-  --gen-soft-gray: #C8C8D2;
-  --gen-cool-gray: #9FA3AD;
+/* LIGHT OVERRIDES */
+html[data-theme="light"] {
+  color-scheme: light;
 
-  /* extra tokens (optional but useful) */
-  --gen-card: rgba(255,255,255,0.04);
-  --gen-card2: rgba(255,255,255,0.03);
-  --gen-border: rgba(255,255,255,0.10);
+  --gen-bg: #f6f7fb;
+  --gen-fg: #0f172a;
+  --gen-soft-gray: #475569;
+  --gen-cool-gray: #737a8c;
+
+  --gen-blueprint: #c9a232;
+  --gen-feature: #d36d57;
+  --gen-cta: #129bc0;
+
+  --gen-card-bg: rgba(255, 255, 255, 0.92);
+  --gen-card-bg-2: rgba(255, 255, 255, 0.78);
+  --gen-card-hover: rgba(15, 23, 42, 0.06);
+  --gen-border: rgba(15, 23, 42, 0.12);
+  --gen-border-2: rgba(15, 23, 42, 0.16);
+
+  --gen-pill-bg: rgba(15, 23, 42, 0.05);
+  --gen-pill-border: rgba(15, 23, 42, 0.12);
+
+  --gen-shadow: 0 14px 55px rgba(76, 198, 227, 0.16),
+    0 10px 28px rgba(2, 6, 23, 0.08);
+  --gen-overlay: rgba(2, 6, 23, 0.16);
+
+  --gen-btn-primary-bg: #0b1220;
+  --gen-btn-primary-fg: #ffffff;
+  --gen-btn-primary-border: rgba(15, 23, 42, 0.18);
+
+  --gen-btn-ghost-bg: rgba(15, 23, 42, 0.04);
+  --gen-btn-ghost-fg: #0b1220;
+  --gen-btn-ghost-border: rgba(15, 23, 42, 0.12);
+
+  --gen-dot: rgba(15, 23, 42, 0.1);
+  --gen-dot-opacity: 0.25;
 }
 
-/* Light */
-:root[data-theme="light"]{
-  --gen-bg: #F7F8FC;
-  --gen-fg: #0E1220;
-  --gen-blueprint: #C9A232; /* sedikit lebih “gold” biar nyaman di light */
-  --gen-feature: #D36D57;
-  --gen-cta: #129BC0;
-  --gen-soft-gray: #5B6070;
-  --gen-cool-gray: #737A8C;
-
-  --gen-card: rgba(255,255,255,0.85);
-  --gen-card2: rgba(255,255,255,0.65);
-  --gen-border: rgba(15,18,32,0.10);
+html,
+body {
+  height: 100%;
 }
 
-html, body { height: 100%; }
-
-body{
+body {
   background: var(--gen-bg);
   color: var(--gen-fg);
 }
 
-::selection{
-  background: rgba(76,198,227,.25);
+/* =========================================
+   DOT BACKGROUND (AMAN, TIDAK NUTUP KLIK)
+   Taruh class "gen-dotbg" di <body> atau wrapper utama.
+   ========================================= */
+.gen-dotbg {
+  position: relative;
 }
 
-/* dot bg ikut tema */
-.gen-dotbg{
-  background-image: radial-gradient(color-mix(in srgb, var(--gen-cool-gray) 22%, transparent) 1px, transparent 1px);
+/* pakai z-index:-1 supaya nggak pernah “nabrak” header/menu */
+.gen-dotbg::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+
+  background-image: radial-gradient(var(--gen-dot) 1px, transparent 1px);
   background-size: 18px 18px;
-  background-position: 0 0;
+  opacity: var(--gen-dot-opacity);
 }
 
-/* ===== Theme-aware utility classes (GEN) ===== */
-:root {
-  --gen-card-bg: rgba(255, 255, 255, 0.04);
-  --gen-card-bg-2: rgba(255, 255, 255, 0.03);
-  --gen-card-hover: rgba(255, 255, 255, 0.06);
-  --gen-border: rgba(255, 255, 255, 0.10);
-  --gen-border-2: rgba(255, 255, 255, 0.15);
-  --gen-pill-bg: rgba(255, 255, 255, 0.06);
-  --gen-pill-border: rgba(255, 255, 255, 0.15);
-  --gen-shadow: 0 14px 55px rgba(76, 198, 227, .18), 0 10px 28px rgba(0,0,0,.35);
-  --gen-overlay: rgba(20, 24, 39, 0.60);
-}
-
-/* LIGHT THEME OVERRIDES */
-html[data-theme="light"] {
-  --gen-card-bg: rgba(15, 23, 42, 0.04);    /* slate-ish */
-  --gen-card-bg-2: rgba(15, 23, 42, 0.03);
-  --gen-card-hover: rgba(15, 23, 42, 0.06);
-  --gen-border: rgba(15, 23, 42, 0.10);
-  --gen-border-2: rgba(15, 23, 42, 0.14);
-  --gen-pill-bg: rgba(15, 23, 42, 0.05);
-  --gen-pill-border: rgba(15, 23, 42, 0.12);
-  --gen-shadow: 0 14px 55px rgba(76, 198, 227, .16), 0 10px 28px rgba(2,6,23,.08);
-  --gen-overlay: rgba(2, 6, 23, 0.16);
-}
-
-/* utility helpers */
+/* =========================================
+   GEN UTILITIES
+   ========================================= */
 .gen-card {
   background: var(--gen-card-bg);
   border: 1px solid var(--gen-border);
   backdrop-filter: blur(10px);
 }
+
 .gen-card-2 {
   background: var(--gen-card-bg-2);
   border: 1px solid var(--gen-border);
   backdrop-filter: blur(10px);
 }
-.gen-card-hover:hover { background: var(--gen-card-hover); }
+
+.gen-card-hover:hover {
+  background: var(--gen-card-hover);
+}
 
 .gen-pill {
   background: var(--gen-pill-bg);
   border: 1px solid var(--gen-pill-border);
 }
 
-.gen-border { border: 1px solid var(--gen-border); }
-.gen-border-2 { border: 1px solid var(--gen-border-2); }
+.gen-border {
+  border: 1px solid var(--gen-border);
+}
 
-.gen-shadow { box-shadow: var(--gen-shadow); }
+.gen-shadow {
+  box-shadow: var(--gen-shadow);
+}
 
-/* image overlay that works in both themes */
 .gen-img-overlay {
   background: linear-gradient(to top, var(--gen-overlay), transparent 60%);
 }
 
-/* default (dark) */
-:root{
-  --gen-fg: #ffffff;       /* teks utama */
-  --gen-ink: #0b1020;      /* teks di atas surface putih */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
-
-/* light */
-html[data-theme="light"]{
-  --gen-fg: #0b1020;       /* teks utama jadi gelap */
-  --gen-ink: #0b1020;      /* tetap gelap */
-  /* opsional biar muted text lebih kebaca */
-  --gen-soft-gray: #475569; /* slate-600-ish */
-}
-
-/* tombol primary (Cari Beasiswa) */
-:root[data-theme="dark"]{
-  --gen-btn-primary-bg: rgba(255,255,255,0.95);
-  --gen-btn-primary-fg: var(--gen-bg);
-}
-
-:root[data-theme="light"]{
-  --gen-btn-primary-bg: #0b1220; /* gelap */
-  --gen-btn-primary-fg: #ffffff;
-}
-
-:root[data-theme="dark"]{
-  --gen-link-fg: #ffffff;
-}
-
-:root[data-theme="light"]{
-  --gen-link-fg: #0b1220; /* gelap */
-}
-
-:root[data-theme="dark"]{
-  --gen-ad-bg: rgba(255,255,255,.04);
-  --gen-ad-border: rgba(255,255,255,.10);
-  --gen-ad-title: #ffffff;
-  --gen-ad-desc: rgba(226,232,240,.85);
-
-  /* CTA */
-  --gen-ad-btn-bg: #ffffff;
-  --gen-ad-btn-fg: var(--gen-bg);
-  --gen-ad-btn-border: rgba(255,255,255,.15);
-  --gen-ad-btn-ghost-bg: rgba(255,255,255,.06);
-}
-
-:root[data-theme="light"]{
-  --gen-ad-bg: rgba(255,255,255,.90);
-  --gen-ad-border: rgba(2,6,23,.10);
-  --gen-ad-title: #0b1220;
-  --gen-ad-desc: rgba(15,23,42,.75);
-
-  /* CTA (dibuat gelap di light mode) */
-  --gen-ad-btn-bg: #0b1220;
-  --gen-ad-btn-fg: #ffffff;
-  --gen-ad-btn-border: rgba(2,6,23,.18);
-  --gen-ad-btn-ghost-bg: rgba(2,6,23,.04);
-}
-
-:root[data-theme="dark"]{
-  --gen-link-fg: #ffffff;
-}
-
-:root[data-theme="light"]{
-  --gen-link-fg: #0b1220;
-}
-
-/* DARK = default (jangan diubah kalau kamu mau tampilan dark tetap sama) */
-:root{
-  /* pakai nilai dark yang kamu sudah punya sekarang */
-  --gen-bg: #0b1020;
-  --gen-fg: #e9eefc;
-  --gen-soft-gray: rgba(233,238,252,.78);
-  --gen-border: rgba(255,255,255,.12);
-  --gen-card-bg: rgba(255,255,255,.04);
-  --gen-ink: #ffffff;
-
-  /* warna brand tetap */
-  --gen-cta: #4cc6e3;
-  --gen-blueprint: #f2c94c;
-  --gen-feature: #ff6b6b;
-}
-
-/* LIGHT = override saja (ini yang kamu edit) */
-html[data-theme="light"]{
-  --gen-bg: #f6f7fb;
-  --gen-fg: #0b1020;
-  --gen-soft-gray: rgba(11,16,32,.72);
-  --gen-border: rgba(11,16,32,.12);
-  --gen-card-bg: rgba(255,255,255,.78);
-  --gen-ink: #0b1020;
-}
-
-/* Optional biar form/scrollbar ikut */
-html[data-theme="dark"] { color-scheme: dark; }
-html[data-theme="light"] { color-scheme: light; }
-
-:root[data-theme="light"]{
-  --gen-bg: #f6f7fb;
-  --gen-fg: #0f172a;
-  --gen-soft-gray: #475569;
-
-  --gen-border: rgba(15, 23, 42, .12);
-  --gen-card-bg: rgba(255,255,255,.92);
-
-  /* warna aksen kamu boleh tetap */
-  /* --gen-cta, --gen-blueprint, --gen-feature, dst */
-}
-
-:root[data-theme="dark"]{
-  --gen-btn-primary-bg: rgba(255,255,255,.92);  /* kaya “bg-white” versi dark */
-  --gen-btn-primary-fg: var(--gen-bg);
-  --gen-btn-primary-border: rgba(255,255,255,.18);
-
-  --gen-btn-ghost-bg: rgba(255,255,255,.04);
-  --gen-btn-ghost-fg: #fff;
-  --gen-btn-ghost-border: rgba(255,255,255,.15);
-}
-
-:root[data-theme="light"]{
-  --gen-btn-primary-bg: #0b1220;               /* gelap biar kebaca */
-  --gen-btn-primary-fg: #ffffff;
-  --gen-btn-primary-border: rgba(15,23,42,.18);
-
-  --gen-btn-ghost-bg: rgba(15,23,42,.04);
-  --gen-btn-ghost-fg: #0b1220;
-  --gen-btn-ghost-border: rgba(15,23,42,.12);
-}
-
-/* Dot background yang aman di mobile */
-.gen-dotbg {
-  position: relative;
-  isolation: isolate;
-}
-
-/* layer dot */
-.gen-dotbg::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-
-  /* warna dot ngikut tema */
-  background-image: radial-gradient(var(--gen-dot) 1px, transparent 1px);
-  background-size: 18px 18px;
-
-  opacity: var(--gen-dot-opacity, 0.25);
-}
-
-/* pastiin konten di atas layer dot */
-.gen-dotbg > * {
-  position: relative;
-  z-index: 1;
-}
-/* ===== DOT BACKGROUND: FIX first-load (no data-theme yet) ===== */
-
-/* default (anggap dark) -> penting supaya refresh langsung muncul */
-:root{
-  --gen-dot: rgba(200, 200, 210, 0.18);
-  --gen-dot-opacity: 0.22;
-}
-
-/* overrides per theme */
-:root[data-theme="light"]{
-  --gen-dot: rgba(15, 23, 42, 0.10);
-  --gen-dot-opacity: 0.25;
-}
-:root[data-theme="dark"]{
-  --gen-dot: rgba(200, 200, 210, 0.18);
-  --gen-dot-opacity: 0.22;
-}
-
-/* dot layer */
-.gen-dotbg{
-  position: relative;
-  isolation: isolate;
-}
-.gen-dotbg::before{
-  content:"";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-
-  /* fallback penting supaya tidak invalid saat var belum kebaca */
-  background-image: radial-gradient(
-    var(--gen-dot, rgba(200, 200, 210, 0.18)) 1px,
-    transparent 1px
-  );
-  background-size: 18px 18px;
-  opacity: var(--gen-dot-opacity, 0.22);
-}
-.gen-dotbg > *{
-  position: relative;
-  z-index: 1;
-}
-
-/* Variabel dot per theme (contoh) */
-:root[data-theme="light"] {
-  --gen-dot: rgba(15, 23, 42, 0.10);
-  --gen-dot-opacity: 0.25;
-}
-
-:root[data-theme="dark"] {
-  --gen-dot: rgba(200, 200, 210, 0.18);
-  --gen-dot-opacity: 0.22;
-}
-
-.gen-dotbg::before {
-  pointer-events: none;
-}
-
-.gen-dotbg { position: relative; z-index: 0; }
-header { position: sticky; z-index: 40; }
-
-/* DEFAULT = DARK */
-:root{
-  --gen-btn-primary-bg: rgba(255,255,255,.92);
-  --gen-btn-primary-fg: #0b1020;
-  --gen-btn-primary-border: rgba(255,255,255,.18);
-}
-
-/* LIGHT override */
-html[data-theme="light"]{
-  --gen-btn-primary-bg: #0b1220;
-  --gen-btn-primary-fg: #ffffff;
-  --gen-btn-primary-border: rgba(15,23,42,.18);
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

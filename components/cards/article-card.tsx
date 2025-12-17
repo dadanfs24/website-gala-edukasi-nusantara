@@ -19,7 +19,7 @@ export function ArticleCard({ item }: { item: Article }) {
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
         />
-        {/* overlay agar aman di light/dark */}
+
         <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
 
         <div className="absolute left-4 top-4 flex items-center gap-2">
@@ -62,9 +62,11 @@ export function ArticleCard({ item }: { item: Article }) {
           {item.author} • {item.publishedISO}
         </div>
 
-        {/* INI yang tadinya "Selengkapnya" putih */}
         <div className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[color:var(--gen-fg)]/75 group-hover:text-[color:var(--gen-cta)]">
-          Selengkapnya <span className="transition-transform group-hover:translate-x-0.5">→</span>
+          Selengkapnya{" "}
+          <span className="transition-transform group-hover:translate-x-0.5">
+            →
+          </span>
         </div>
       </div>
     </Link>

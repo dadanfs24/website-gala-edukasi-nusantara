@@ -1,30 +1,39 @@
 import { events } from "@/lib/data/events";
-import { EventCard } from "@/components/cards/event-card";
+import { EventCarousel } from "@/components/cards/event-carousel";
 import { AdSlot } from "@/components/ui/ad-slot";
 
 export default function EventPage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
-      <div>
-        <h1 className="text-3xl font-extrabold tracking-tight md:text-4xl">Event</h1>
-        <p className="mt-2 text-sm text-[color:var(--gen-soft-gray)]/90">
-          Tryout / Webinar — cover, judul, penyelenggara, tanggal & waktu, lokasi, harga, status, dan tombol daftar/detail.
-        </p>
-      </div>
+    <div className="gen-dotbg">
+      <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+        {/* Header kamu tetap */}
+        <div className="max-w-2xl">
+          <div className="inline-flex items-center gap-2 rounded-full border border-[color:var(--gen-border)] bg-[color:var(--gen-card-bg)] px-3 py-1 text-xs font-semibold text-[color:var(--gen-fg)]/65">
+            <span className="h-2 w-2 rounded-full bg-[color:var(--gen-cta)]" />
+            Tryout / Webinar / Event
+          </div>
 
-      <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {events.map((item) => (
-          <EventCard key={item.slug} item={item} />
-        ))}
-      </div>
+          <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-[color:var(--gen-fg)] md:text-4xl">
+            Event
+          </h1>
 
-      <div className="mt-8">
-        <AdSlot
-          title="Monetisasi • Promosi Event"
-          description="Promosikan tryout/webinar kampus kamu di GEN (banner + listing + CTA daftar)."
-          ctaLabel="Promosikan Event"
-          href="mailto:partnership@gen.id?subject=Promosi%20Event%20di%20GEN"
-        />
+          <p className="mt-2 text-sm leading-relaxed text-[color:var(--gen-fg)]/70">
+            Geser untuk lihat event lain. Auto geser tiap 10 detik.
+          </p>
+        </div>
+
+        {/* CAROUSEL */}
+        <EventCarousel items={events} intervalMs={10000} />
+
+        {/* Ad */}
+        <div className="mt-8 rounded-3xl border border-[color:var(--gen-border)] bg-[color:var(--gen-card-bg)] p-4 backdrop-blur md:p-6">
+          <AdSlot
+            title="Monetisasi • Event Promosi Berbayar"
+            description="Kampus/instansi bisa pasang event promosi + banner + link affiliate yang relate."
+            ctaLabel="Hubungi Editorial"
+            href="mailto:editorial@gen.id?subject=Event%20Promosi%20di%20GEN"
+          />
+        </div>
       </div>
     </div>
   );

@@ -18,10 +18,12 @@ export interface Scholarship {
 export type ArticleCategory =
   | "Tips Beasiswa"
   | "Tips Memilih Kampus"
+  | "Panduan Kampus & Jurusan"
   | "Prospek Karier"
   | "Panduan Orang Tua"
   | "Perilaku Gen-Z"
   | "Informasi Relevan";
+
 
 export interface Article {
   slug: string;
