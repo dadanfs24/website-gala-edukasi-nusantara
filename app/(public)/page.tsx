@@ -61,133 +61,111 @@ function Shortcut({
 export default function HomePage() {
   return (
     <div>
-      {/* HERO */}
-      <section className="mx-auto max-w-6xl px-4 pb-10 pt-10 sm:px-6 md:pb-16 md:pt-14">
-        <div className="grid items-center gap-10 md:grid-cols-2">
-          {/* LEFT */}
-          <div>
-            {/* ICON + BRAND PILL */}
-            <div className="inline-flex flex-wrap items-center gap-3">
-              <span
-                className="gen-card gen-shadow rounded-2xl p-3"
-                aria-hidden="true"
-              >
-                <GraduationCap
-                  className="h-7 w-7"
-                  style={{ color: "var(--gen-cta)" }}
-                />
-              </span>
+     {/* HERO */}
+<section className="mx-auto max-w-6xl px-4 pb-10 pt-10 sm:px-6 md:pb-16 md:pt-14">
+  <div className="grid items-center gap-10 md:grid-cols-2 md:gap-12 lg:gap-14">
+    {/* LEFT */}
+    <div className="min-w-0">
+      <div className="inline-flex flex-wrap items-center gap-3">
+        <span className="gen-card gen-shadow rounded-2xl p-3" aria-hidden="true">
+          <GraduationCap className="h-7 w-7" style={{ color: "var(--gen-cta)" }} />
+        </span>
 
-              <div className="gen-pill rounded-full px-3 py-1 text-xs font-semibold text-[color:var(--gen-soft-gray)]">
-                GEN • Gala Edukasi Nusantara{" "}
-                <span className="text-[color:var(--gen-blueprint)]">●</span>
-              </div>
-            </div>
-
-            <h1 className="mt-4 text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">
-              Teman Pintar{" "}
-              <span className="text-[color:var(--gen-blueprint)]">Gen Z</span>{" "}
-              <span> dan </span>
-              <span className="text-[color:var(--gen-feature)]">
-                Gen Alpha
-              </span>{" "}
-              Dalam Menyiapkan{" "}
-              <span className="text-[color:var(--gen-cta)]">
-                Masa Depan Pendidikan
-              </span>
-            </h1>
-
-            <p className="mt-4 text-[15px] leading-relaxed text-[color:var(--gen-soft-gray)]/90">
-              <span>
-                Banyak siswa merasa bingung saat harus menentukan jurusan,
-                kampus, atau masa depan setelah lulus sekolah. Informasi terasa
-                menumpuk, standar keberhasilan terlihat sama untuk semua orang,
-                dan tekanan untuk "harus sukses" sering datang dari berbagai
-                arah. Gala Edukasi Nusantara (GEN) hadir untuk menemani kamu,
-                bukan menghakimi, bukan memaksa, tapi membantu kamu menemukan
-                jalan pendidikan yang paling masuk akal dan sesuai dengan
-                dirimu.
-              </span>
-            </p>
-
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Link
-                href="/beasiswa"
-                className=" 
-      inline-flex items-center gap-2 rounded-2xl px-5 py-3 font-semibold
-      transition-transform hover:scale-[1.02] active:scale-[0.98]
-      bg-[color:var(--gen-btn-primary-bg)] text-[color:var(--gen-btn-primary-fg)]
-    "
-              >
-                Cari Beasiswa{" "}
-                <span className="text-[color:var(--gen-cta)]">→</span>
-              </Link>
-            </div>
-
-            {/* <div className="mt-6 grid gap-3 sm:grid-cols-3">
-              <div className="gen-card-2 rounded-2xl p-4">
-                <div className="text-sm font-extrabold">Terverifikasi</div>
-                <div className="mt-1 text-xs text-[color:var(--gen-soft-gray)]/90">
-                  Data jalur beasiswa & info kampus terstruktur.
-                </div>
-              </div>
-              <div className="gen-card-2 rounded-2xl p-4">
-                <div className="text-sm font-extrabold">Ramah Gen-Z</div>
-                <div className="mt-1 text-xs text-[color:var(--gen-soft-gray)]/90">
-                  Bahasa jelas, checklist, dan langkah praktis.
-                </div>
-              </div>
-              <div className="gen-card-2 rounded-2xl p-4">
-                <div className="text-sm font-extrabold">Feeder Kampus</div>
-                <div className="mt-1 text-xs text-[color:var(--gen-soft-gray)]/90">
-                  Promosi & akuisisi mahasiswa via GEN.
-                </div>
-              </div>
-            </div> */}
-          </div>
-
-          {/* RIGHT */}
-          <div className="relative">
-            {/* glow blobs (aman buat light/dark karena cuma dekorasi) */}
-            <div className="absolute -left-8 -top-8 h-40 w-40 rounded-full bg-[color:var(--gen-cta)]/20 blur-3xl" />
-            <div className="absolute -bottom-10 -right-10 h-52 w-52 rounded-full bg-[color:var(--gen-feature)]/20 blur-3xl" />
-
-            {/* image card */}
-            <div className="gen-card rounded-3xl p-3">
-              <div className="relative overflow-hidden rounded-2xl gen-border">
-              <img
-  src="/images/images-1.png"
-  alt="GEN student group"
-  className="h-[360px] w-full object-cover sm:h-[420px] md:h-[520px]"
-  loading="lazy"
-/>
-
-                {/* theme-aware overlay */}
-                <div className="pointer-events-none absolute inset-0 gen-img-overlay" />
-
-                {/* stickers */}
-                <div
-  className="absolute right-4 top-4 rotate-[6deg] rounded-2xl px-4 py-2 text-sm font-extrabold"
-  style={{
-    background: "var(--gen-blueprint)",
-    color: "var(--gen-bg)",
-  }}
->
-  GEN Guide
-</div>
-
-<div
-  className="absolute left-4 bottom-4 -rotate-[6deg] rounded-2xl px-4 py-2 text-sm font-extrabold text-white"
-  style={{ background: "var(--gen-feature)" }}
->
-  No Overthinking
-</div>
-
-              </div>
-            </div>
-          </div>
+        <div className="gen-pill rounded-full px-3 py-1 text-xs font-semibold text-[color:var(--gen-soft-gray)]">
+          GEN • Gala Edukasi Nusantara{" "}
+          <span className="text-[color:var(--gen-blueprint)]">●</span>
         </div>
-      </section>
+      </div>
+
+      <h1 className="mt-4 text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">
+        Teman Pintar{" "}
+        <span className="text-[color:var(--gen-blueprint)]">Gen Z</span>{" "}
+        <span> dan </span>
+        <span className="text-[color:var(--gen-feature)]">Gen Alpha</span>{" "}
+        Dalam Menyiapkan{" "}
+        <span className="text-[color:var(--gen-cta)]">Masa Depan Pendidikan</span>
+      </h1>
+
+      <p className="mt-4 text-[15px] leading-relaxed text-[color:var(--gen-soft-gray)]/90">
+        Banyak siswa merasa bingung saat harus menentukan jurusan, kampus, atau masa depan setelah
+        lulus sekolah. Informasi terasa menumpuk, standar keberhasilan terlihat sama untuk semua
+        orang, dan tekanan untuk "harus sukses" sering datang dari berbagai arah. Gala Edukasi
+        Nusantara (GEN) hadir untuk menemani kamu, bukan menghakimi, bukan memaksa, tapi membantu
+        kamu menemukan jalan pendidikan yang paling masuk akal dan sesuai dengan dirimu.
+      </p>
+
+      <div className="mt-6 flex flex-wrap gap-3">
+        <Link
+          href="/beasiswa"
+          className="
+            inline-flex items-center gap-2 rounded-2xl px-5 py-3 font-semibold
+            transition-transform hover:scale-[1.02] active:scale-[0.98]
+            bg-[color:var(--gen-btn-primary-bg)] text-[color:var(--gen-btn-primary-fg)]
+          "
+        >
+          Cari Beasiswa <span className="text-[color:var(--gen-cta)]">→</span>
+        </Link>
+      </div>
+    </div>
+
+{/* RIGHT (RAPIH + CENTER + NO WHITE BOX LIGHT) */}
+<div className="relative flex justify-center md:justify-end">
+  {/* glow blobs */}
+  <div className="pointer-events-none absolute -left-10 -top-10 h-56 w-56 rounded-full bg-[color:var(--gen-cta)]/12 blur-3xl" />
+  <div className="pointer-events-none absolute -bottom-12 -right-12 h-64 w-64 rounded-full bg-[color:var(--gen-feature)]/12 blur-3xl" />
+
+  {/* stage */}
+  <div className="relative isolate w-full max-w-[560px] sm:max-w-[640px] md:max-w-[680px] lg:max-w-[740px]">
+    <div className="relative h-[420px] sm:h-[480px] md:h-[520px] lg:h-[620px]">
+      {/* IMAGE (SELALU CENTER, nggak geser kanan) */}
+      <img
+        src="/images/images-1.png"
+        alt="GEN student group"
+        loading="lazy"
+        className="
+          absolute bottom-[-10px] left-1/2 -translate-x-1/2
+          h-full w-full object-contain origin-bottom
+          scale-[1.30] sm:scale-[1.18] md:scale-[1.12] lg:scale-[1.16]
+          mix-blend-multiply dark:mix-blend-normal
+        "
+        style={{
+  WebkitMaskImage: `
+    linear-gradient(to top, transparent 0%, rgba(0,0,0,1) 22%, rgba(0,0,0,1) 100%),
+    linear-gradient(to right, transparent 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 100%)
+  `,
+  maskImage: `
+    linear-gradient(to top, transparent 0%, rgba(0,0,0,1) 22%, rgba(0,0,0,1) 100%),
+    linear-gradient(to right, transparent 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 100%)
+  `,
+  WebkitMaskComposite: "source-in",
+  maskComposite: "intersect",
+}}
+
+      />
+
+      {/* GEN Guide (dekat ke subjek) */}
+      <div
+        className="absolute right-10 rotate-[6deg] rounded-2xl px-4 py-2 text-sm font-extrabold md:right-14 md:top-16"
+        style={{ background: "var(--gen-blueprint)", color: "var(--gen-bg)" }}
+      >
+        GEN Guide
+      </div>
+
+      {/* No Overthinking (dekat & aman) */}
+      <div
+        className="absolute left-10 bottom-18 -rotate-[6deg] rounded-2xl px-4 py-2 text-sm font-extrabold text-white md:left-14 md:bottom-25"
+        style={{ background: "var(--gen-feature)" }}
+      >
+        No Overthinking
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+</section>
+
 
       {/* QUICK MENU */}
       {/* <section className="mx-auto max-w-6xl px-4 pb-12 sm:px-6">
