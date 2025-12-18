@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Moon, Sun } from "lucide-react";
 
 type Theme = "dark" | "light";
 
@@ -8,7 +9,8 @@ export function ThemeToggle() {
   const [theme, setTheme] = useState<Theme>("dark");
 
   useEffect(() => {
-    const current = (document.documentElement.getAttribute("data-theme") as Theme) || "dark";
+    const current =
+      (document.documentElement.getAttribute("data-theme") as Theme) || "dark";
     setTheme(current);
   }, []);
 
@@ -33,7 +35,13 @@ export function ThemeToggle() {
       aria-label="Toggle theme"
       title="Toggle theme"
     >
-      <span style={{ color: "var(--gen-cta)" }}>{theme === "dark" ? "🌙" : "☀️"}</span>
+      <span style={{ color: "var(--gen-cta)" }}>
+        {theme === "dark" ? (
+          <Moon className="h-4 w-4" />
+        ) : (
+          <Sun className="h-4 w-4" />
+        )}
+      </span>
       <span>{theme === "dark" ? "Dark" : "Light"}</span>
     </button>
   );

@@ -1,5 +1,32 @@
 import Link from "next/link";
-import { Target, GraduationCap, Wallet, Megaphone } from "lucide-react";
+import {
+  Target,
+  GraduationCap,
+  Wallet,
+  Megaphone,
+  Rocket,
+  Brain,
+  BarChart3,
+  CalendarDays,
+  Lightbulb,
+  Sparkles,
+  Puzzle,
+  ReceiptText,
+  Search,
+  Compass,
+  Handshake,
+  Briefcase,
+  MessageCircle,
+  Gift,
+  Users,
+  BookOpen,
+  Mic,
+  CheckCircle2,
+  Heart,
+  BadgeCheck,
+  Newspaper,
+  ArrowRight,
+} from "lucide-react";
 
 import { AdSlot } from "@/components/ui/ad-slot";
 import { scholarships } from "@/lib/data/scholarships";
@@ -128,33 +155,34 @@ export default function HomePage() {
             {/* image card */}
             <div className="gen-card rounded-3xl p-3">
               <div className="relative overflow-hidden rounded-2xl gen-border">
-                <img
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1400&q=80"
-                  alt="GEN student group"
-                  className="h-[360px] w-full object-cover sm:h-[420px] md:h-[520px]"
-                  loading="lazy"
-                />
+              <img
+  src="/images/images-1.png"
+  alt="GEN student group"
+  className="h-[360px] w-full object-cover sm:h-[420px] md:h-[520px]"
+  loading="lazy"
+/>
 
                 {/* theme-aware overlay */}
                 <div className="pointer-events-none absolute inset-0 gen-img-overlay" />
 
                 {/* stickers */}
                 <div
-                  className="absolute right-4 top-4 rotate-[6deg] rounded-2xl px-4 py-2 text-sm font-extrabold"
-                  style={{
-                    background: "var(--gen-blueprint)",
-                    color: "var(--gen-bg)",
-                  }}
-                >
-                  Blueprint
-                </div>
+  className="absolute right-4 top-4 rotate-[6deg] rounded-2xl px-4 py-2 text-sm font-extrabold"
+  style={{
+    background: "var(--gen-blueprint)",
+    color: "var(--gen-bg)",
+  }}
+>
+  GEN Guide
+</div>
 
-                <div
-                  className="absolute left-4 bottom-4 -rotate-[6deg] rounded-2xl px-4 py-2 text-sm font-extrabold text-white"
-                  style={{ background: "var(--gen-feature)" }}
-                >
-                  Feature
-                </div>
+<div
+  className="absolute left-4 bottom-4 -rotate-[6deg] rounded-2xl px-4 py-2 text-sm font-extrabold text-white"
+  style={{ background: "var(--gen-feature)" }}
+>
+  No Overthinking
+</div>
+
               </div>
             </div>
           </div>
@@ -226,7 +254,8 @@ export default function HomePage() {
                   color: "var(--gen-fg)",
                 }}
               >
-                💡 Apa Itu GEN?
+                <Lightbulb className="h-4 w-4 shrink-0" />
+                <span>Apa Itu GEN?</span>
               </span>
               <span
                 className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold"
@@ -288,29 +317,33 @@ export default function HomePage() {
                     color: "color-mix(in srgb, var(--gen-fg) 70%, transparent)",
                   }}
                 >
-                  🚀 Biar kamu punya arah, bukan cuma ikut arus.
+                  <Rocket className="h-4 w-4 shrink-0" />
+                  <span>Biar kamu punya arah, bukan cuma ikut arus.</span>
                 </div>
               </div>
 
               {/* Points */}
               <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-1">
                 {[
-                  { e: "🎓", t: "Informasi beasiswa yang jelas dan update" },
                   {
-                    e: "🧠",
+                    Icon: GraduationCap,
+                    t: "Informasi beasiswa yang jelas dan update",
+                  },
+                  {
+                    Icon: Brain,
                     t: "Artikel ringan tapi berbobot tentang jurusan, kampus, dan dunia kerja",
                   },
                   {
-                    e: "📊",
+                    Icon: BarChart3,
                     t: "Tryout dan simulasi untuk mengukur kesiapan diri",
                   },
                   {
-                    e: "📅",
+                    Icon: CalendarDays,
                     t: "Event edukasi yang relevan dengan tantangan anak muda hari ini",
                   },
-                ].map((x) => (
+                ].map(({ Icon, t }) => (
                   <div
-                    key={x.t}
+                    key={t}
                     className="flex gap-3 rounded-2xl p-4"
                     style={{
                       background:
@@ -318,7 +351,7 @@ export default function HomePage() {
                       border: "1px solid var(--gen-border)",
                     }}
                   >
-                    <span className="text-lg">{x.e}</span>
+                    <Icon className="mt-0.5 h-5 w-5 shrink-0" />
                     <span
                       className="text-sm leading-relaxed"
                       style={{
@@ -326,7 +359,7 @@ export default function HomePage() {
                           "color-mix(in srgb, var(--gen-fg) 78%, transparent)",
                       }}
                     >
-                      {x.t}
+                      {t}
                     </span>
                   </div>
                 ))}
@@ -376,7 +409,8 @@ export default function HomePage() {
                     color: "var(--gen-fg)",
                   }}
                 >
-                  ✨ GEN Direction
+                  <Sparkles className="h-4 w-4 shrink-0" />
+                  <span>GEN Direction</span>
                 </span>
 
                 <span
@@ -389,7 +423,8 @@ export default function HomePage() {
                     color: "var(--gen-fg)",
                   }}
                 >
-                  🧠 No Overthinking
+                  <Brain className="h-4 w-4 shrink-0" />
+                  <span>No Overthinking</span>
                 </span>
               </div>
 
@@ -448,7 +483,7 @@ export default function HomePage() {
                         "1px solid color-mix(in srgb, var(--gen-blueprint) 32%, transparent)",
                     }}
                   >
-                    🎯
+                    <Target className="h-5 w-5" />
                   </span>
                   <div>
                     <div
@@ -517,7 +552,7 @@ export default function HomePage() {
                         "1px solid color-mix(in srgb, var(--gen-cta) 32%, transparent)",
                     }}
                   >
-                    🧩
+                    <Puzzle className="h-5 w-5" />
                   </span>
                   <div>
                     <div
@@ -538,28 +573,28 @@ export default function HomePage() {
                 <ul className="mt-4 grid gap-3">
                   {[
                     {
-                      e: "🧾",
+                      Icon: ReceiptText,
                       t: "Menyajikan informasi pendidikan yang jujur, relevan, dan mudah dipahami",
                     },
                     {
-                      e: "🔍",
+                      Icon: Search,
                       t: "Membantu siswa mengenal potensi, minat, dan pilihan masa depan",
                     },
                     {
-                      e: "🧭",
+                      Icon: Compass,
                       t: "Mendampingi proses persiapan masuk perguruan tinggi",
                     },
                     {
-                      e: "🤝",
+                      Icon: Handshake,
                       t: "Mengajak orang tua menjadi support system, bukan sumber tekanan",
                     },
                     {
-                      e: "💼",
+                      Icon: Briefcase,
                       t: "Menghubungkan pendidikan dengan realita dunia kerja",
                     },
-                  ].map((x) => (
+                  ].map(({ Icon, t }) => (
                     <li
-                      key={x.t}
+                      key={t}
                       className="flex gap-3 rounded-2xl p-4"
                       style={{
                         background:
@@ -567,7 +602,7 @@ export default function HomePage() {
                         border: "1px solid var(--gen-border)",
                       }}
                     >
-                      <span className="text-lg">{x.e}</span>
+                      <Icon className="mt-0.5 h-5 w-5 shrink-0" />
                       <span
                         className="text-sm leading-relaxed sm:text-base"
                         style={{
@@ -575,7 +610,7 @@ export default function HomePage() {
                             "color-mix(in srgb, var(--gen-fg) 82%, transparent)",
                         }}
                       >
-                        {x.t}
+                        {t}
                       </span>
                     </li>
                   ))}
@@ -593,7 +628,10 @@ export default function HomePage() {
                 color: "color-mix(in srgb, var(--gen-fg) 70%, transparent)",
               }}
             >
-              <span>💡 GEN = “pilih pakai data, bukan pakai panik.”</span>
+              <span className="inline-flex items-center gap-2">
+                <Lightbulb className="h-4 w-4 shrink-0" />
+                <span>GEN = “pilih pakai data, bukan pakai panik.”</span>
+              </span>
               <span style={{ color: "var(--gen-soft-gray)" }}>
                 #GenZFriendly
               </span>
@@ -628,13 +666,16 @@ export default function HomePage() {
                   className="gen-pill inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold"
                   style={{ color: "var(--gen-soft-gray)" }}
                 >
-                  🧠 Gen-Z & Gen-Alpha Friendly
+                  <Brain className="h-4 w-4 shrink-0" />
+                  <span>Gen-Z & Gen-Alpha Friendly</span>
                 </span>
+
                 <span
                   className="gen-pill inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold"
                   style={{ color: "var(--gen-soft-gray)" }}
                 >
-                  ✨ Relatable • Clear • Safe
+                  <Sparkles className="h-4 w-4 shrink-0" />
+                  <span>Relatable • Clear • Safe</span>
                 </span>
               </div>
 
@@ -666,7 +707,8 @@ export default function HomePage() {
               className="gen-pill inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold"
               style={{ color: "var(--gen-soft-gray)" }}
             >
-              💬 Study buddy vibes
+              <MessageCircle className="h-4 w-4 shrink-0" />
+              <span>Study buddy vibes</span>
             </span>
           </div>
 
@@ -853,13 +895,16 @@ export default function HomePage() {
                   className="gen-pill inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold"
                   style={{ color: "var(--gen-soft-gray)" }}
                 >
-                  🎁 Benefit GEN
+                  <Gift className="h-4 w-4 shrink-0" />
+                  <span>Benefit GEN</span>
                 </span>
+
                 <span
                   className="gen-pill inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold"
                   style={{ color: "var(--gen-soft-gray)" }}
                 >
-                  👥 Buat siapa?
+                  <Users className="h-4 w-4 shrink-0" />
+                  <span>Buat siapa?</span>
                 </span>
               </div>
 
@@ -891,7 +936,8 @@ export default function HomePage() {
               className="gen-pill inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold"
               style={{ color: "var(--gen-soft-gray)" }}
             >
-              ✨ Clear • Relatable • Useful
+              <Sparkles className="h-4 w-4 shrink-0" />
+              <span>Clear • Relatable • Useful</span>
             </span>
           </div>
 
@@ -899,9 +945,10 @@ export default function HomePage() {
           <div className="mt-6 grid gap-3 md:grid-cols-2">
             <div className="group gen-card-2 rounded-2xl p-5 transition-transform hover:-translate-y-0.5">
               <div className="flex items-start gap-3">
-                <span className="gen-pill rounded-2xl px-3 py-2 text-lg">
-                  🎓
+                <span className="gen-pill inline-flex items-center justify-center rounded-2xl px-3 py-2">
+                  <GraduationCap className="h-5 w-5" />
                 </span>
+
                 <div className="min-w-0">
                   <div className="text-sm font-extrabold">
                     Informasi Beasiswa
@@ -933,8 +980,8 @@ export default function HomePage() {
 
             <div className="group gen-card-2 rounded-2xl p-5 transition-transform hover:-translate-y-0.5">
               <div className="flex items-start gap-3">
-                <span className="gen-pill rounded-2xl px-3 py-2 text-lg">
-                  📚
+                <span className="gen-pill inline-flex items-center justify-center rounded-2xl px-3 py-2">
+                  <BookOpen className="h-5 w-5" />
                 </span>
                 <div className="min-w-0">
                   <div className="text-sm font-extrabold">Artikel Edukasi</div>
@@ -965,8 +1012,8 @@ export default function HomePage() {
 
             <div className="group gen-card-2 rounded-2xl p-5 transition-transform hover:-translate-y-0.5">
               <div className="flex items-start gap-3">
-                <span className="gen-pill rounded-2xl px-3 py-2 text-lg">
-                  🧠
+                <span className="gen-pill inline-flex items-center justify-center rounded-2xl px-3 py-2">
+                  <Brain className="h-5 w-5" />
                 </span>
                 <div className="min-w-0">
                   <div className="text-sm font-extrabold">
@@ -999,8 +1046,8 @@ export default function HomePage() {
 
             <div className="group gen-card-2 rounded-2xl p-5 transition-transform hover:-translate-y-0.5">
               <div className="flex items-start gap-3">
-                <span className="gen-pill rounded-2xl px-3 py-2 text-lg">
-                  🎤
+                <span className="gen-pill inline-flex items-center justify-center rounded-2xl px-3 py-2">
+                  <Mic className="h-5 w-5" />
                 </span>
                 <div className="min-w-0">
                   <div className="text-sm font-extrabold">Event & Webinar</div>
@@ -1040,7 +1087,8 @@ export default function HomePage() {
                 className="gen-pill inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold"
                 style={{ color: "var(--gen-soft-gray)" }}
               >
-                ✅ You belong here
+                <CheckCircle2 className="h-4 w-4 shrink-0" />
+                <span>You belong here</span>
               </span>
             </div>
 
@@ -1092,7 +1140,8 @@ export default function HomePage() {
                 className="gen-pill inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold"
                 style={{ color: "var(--gen-soft-gray)" }}
               >
-                💛 Komitmen GEN
+                <BadgeCheck className="h-4 w-4 shrink-0" />
+                <span>Komitmen GEN</span>
               </span>
 
               <h3 className="mt-3 text-xl font-extrabold tracking-tight md:text-2xl">
@@ -1124,14 +1173,17 @@ export default function HomePage() {
               className="gen-pill inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold"
               style={{ color: "var(--gen-soft-gray)" }}
             >
-              ✨ Real talk, real help
+              <Sparkles className="h-4 w-4 shrink-0" />
+              <span>Real talk, real help</span>
             </span>
           </div>
 
           {/* fun highlight */}
           <div className="mt-6 gen-card-2 rounded-2xl p-5">
             <div className="flex flex-wrap items-center gap-3">
-              <span className="gen-pill rounded-2xl px-3 py-2 text-lg">✨</span>
+              <span className="gen-pill inline-flex items-center justify-center rounded-2xl px-3 py-2">
+                <Sparkles className="h-5 w-5" />
+              </span>
               <div className="min-w-0">
                 <div className="text-sm font-extrabold">Saatnya Kamu Mulai</div>
                 <p
@@ -1147,25 +1199,25 @@ export default function HomePage() {
             {/* explore chips */}
             <div className="mt-4 grid gap-2 md:grid-cols-3">
               <div
-                className="gen-pill rounded-2xl px-4 py-3 text-sm"
+                className="gen-pill inline-flex items-center rounded-2xl px-4 py-3 text-sm"
                 style={{ color: "var(--gen-soft-gray)" }}
               >
-                <span className="mr-2">📰</span> Artikel edukasi yang relate
-                sama kondisi kamu
+                <Newspaper className="mr-2 h-4 w-4 shrink-0" />
+                <span>Artikel edukasi yang relate sama kondisi kamu</span>
               </div>
               <div
-                className="gen-pill rounded-2xl px-4 py-3 text-sm"
+                className="gen-pill inline-flex items-center rounded-2xl px-4 py-3 text-sm"
                 style={{ color: "var(--gen-soft-gray)" }}
               >
-                <span className="mr-2">🎓</span> Info beasiswa yang mungkin
-                cocok buatmu
+                <GraduationCap className="mr-2 h-4 w-4 shrink-0" />
+                <span>Info beasiswa yang mungkin cocok buatmu</span>
               </div>
               <div
-                className="gen-pill rounded-2xl px-4 py-3 text-sm"
+                className="gen-pill inline-flex items-center rounded-2xl px-4 py-3 text-sm"
                 style={{ color: "var(--gen-soft-gray)" }}
               >
-                <span className="mr-2">🎤</span> Event & tryout biar kamu lebih
-                siap
+                <Mic className="mr-2 h-4 w-4 shrink-0" />
+                <span>Event & tryout biar kamu lebih siap</span>
               </div>
             </div>
 
@@ -1210,15 +1262,18 @@ export default function HomePage() {
             </div>
 
             <p
-              className="mt-4 text-xs"
+              className="mt-4 inline-flex items-start gap-2 text-xs"
               style={{
                 color:
                   "color-mix(in srgb, var(--gen-soft-gray) 88%, transparent)",
               }}
             >
-              👉 Jelajahi menu Artikel, Beasiswa, dan Event di Gala Edukasi
-              Nusantara. Karena masa depanmu terlalu berharga untuk ditentukan
-              asal-asalan.
+              <ArrowRight className="mt-0.5 h-4 w-4 shrink-0" />
+              <span>
+                Jelajahi menu Artikel, Beasiswa, dan Event di Gala Edukasi
+                Nusantara. Karena masa depanmu terlalu berharga untuk ditentukan
+                asal-asalan.
+              </span>
             </p>
           </div>
         </div>
