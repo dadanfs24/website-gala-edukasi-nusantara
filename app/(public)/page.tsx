@@ -79,9 +79,9 @@ export default function HomePage() {
 
       <h1 className="mt-4 text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">
         Teman Pintar{" "}
-        <span className="text-[color:var(--gen-blueprint)]">Gen Z</span>{" "}
+        <span className="text-[color:var(--gen-blueprint)]">Gen-Z</span>{" "}
         <span> dan </span>
-        <span className="text-[color:var(--gen-feature)]">Gen Alpha</span>{" "}
+        <span className="text-[color:var(--gen-feature)]">Gen-Alpha</span>{" "}
         Dalam Menyiapkan{" "}
         <span className="text-[color:var(--gen-cta)]">Masa Depan Pendidikan</span>
       </h1>
