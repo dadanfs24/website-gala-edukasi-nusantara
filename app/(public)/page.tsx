@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image"
+
 import {
   Target,
   GraduationCap,
@@ -66,16 +68,31 @@ export default function HomePage() {
   <div className="grid items-center gap-10 md:grid-cols-2 md:gap-12 lg:gap-14">
     {/* LEFT */}
     <div className="min-w-0">
-      <div className="inline-flex flex-wrap items-center gap-3">
-        <span className="gen-card gen-shadow rounded-2xl p-3" aria-hidden="true">
-          <GraduationCap className="h-7 w-7" style={{ color: "var(--gen-cta)" }} />
-        </span>
+    <div className="inline-flex flex-wrap items-center gap-3">
+    <span
+  className="gen-card gen-shadow rounded-2xl p-3 inline-flex items-center justify-center"
+  aria-hidden="true"
+  style={{
+    background: "var(--gen-card-bg)",
+    border: "1px solid var(--gen-border)",
+  }}
+>
+  <Image
+    src="/images/gen-logo.png"
+    alt="GEN Logo"
+    width={44}
+    height={44}
+    className="h-11 w-11 object-contain"
+    priority
+  />
+</span>
 
-        <div className="gen-pill rounded-full px-3 py-1 text-xs font-semibold text-[color:var(--gen-soft-gray)]">
-          GEN • Gala Edukasi Nusantara{" "}
-          <span className="text-[color:var(--gen-blueprint)]">●</span>
-        </div>
-      </div>
+  <div className="gen-pill rounded-full px-3 py-1 text-xs font-semibold text-[color:var(--gen-soft-gray)]">
+    GEN • Gala Edukasi Nusantara{" "}
+    <span className="text-[color:var(--gen-blueprint)]">●</span>
+  </div>
+</div>
+
 
       <h1 className="mt-4 text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">
         Teman Pintar{" "}

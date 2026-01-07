@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image"
 import { useEffect, useState } from "react";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 
@@ -72,30 +73,36 @@ export function SiteHeader() {
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
           {/* Brand */}
           <Link href="/" className="flex items-center gap-3">
-            <span
-              className="inline-flex h-10 w-10 items-center justify-center rounded-2xl"
-              style={{
-                background: "var(--gen-card-bg)",
-                border: "1px solid var(--gen-border)",
-              }}
-            >
-              <span className="font-black" style={{ color: "var(--gen-cta)" }}>
-                G
-              </span>
-            </span>
+  <span
+    className="inline-flex h-10 w-10 items-center justify-center rounded-2xl overflow-hidden"
+    style={{
+      background: "var(--gen-card-bg)",
+      border: "1px solid var(--gen-border)",
+    }}
+  >
+    <Image
+      src="/images/gen-logo.png"
+      alt="GEN Logo"
+      width={40}
+      height={40}
+      className="h-10 w-10 object-contain"
+      priority
+    />
+  </span>
 
-            <div className="leading-tight">
-              <div
-                className="text-sm font-extrabold tracking-tight"
-                style={{ color: "var(--gen-fg)" }}
-              >
-                GEN
-              </div>
-              <div className="text-xs" style={{ color: "var(--gen-soft-gray)" }}>
-                Gala Edukasi Nusantara
-              </div>
-            </div>
-          </Link>
+  <div className="leading-tight">
+    <div
+      className="text-sm font-extrabold tracking-tight"
+      style={{ color: "var(--gen-fg)" }}
+    >
+      GEN
+    </div>
+    <div className="text-xs" style={{ color: "var(--gen-soft-gray)" }}>
+      Gala Edukasi Nusantara
+    </div>
+  </div>
+</Link>
+
 
           {/* Desktop nav */}
           <nav className="hidden items-center gap-1 md:flex">
